@@ -1,6 +1,7 @@
-"""Read-only Trading212 client (public API beta).
+"""Read-only Trading212 client (public API).
 
-Docs: https://t212public-api-docs.redoc.ly/
+Docs: https://docs.trading212.com/api
+Auth: HTTP Basic — API key as username, API secret as password.
 Never places orders — this app only reads positions and cash.
 """
 import json
@@ -38,31 +39,46 @@ class T212Error(RuntimeError):
     pass
 
 
-def _headers() -> dict:
-    if not config.T212_API_KEY:
+def _auth() -> tuple[str, str]:
+    if not config.T212_API_KEY or not config.T212_API_SECRET:
         raise T212Error(
-            "T212_API_KEY is not set. Copy .env.example to .env, paste your key "
-            "(Trading212 app -> Settings -> API), or switch to Manual mode."
+            "T212_API_KEY / T212_API_SECRET is not set. Put both keys from the "
+            "Trading212 app (Settings -> API) into .env, or use Manual mode."
         )
-    return {"Authorization": config.T212_API_KEY}
+    return (config.T212_API_KEY, config.T212_API_SECRET)
 
 
-def _get(path: str):
-    resp = requests.get(f"{config.T212_BASE_URL}{path}", headers=_headers(), timeout=30)
+def _get(path: str, retry_429: bool = True):
+    resp = requests.get(f"{config.T212_BASE_URL}{path}", auth=_auth(), timeout=30)
     if resp.status_code == 429:
+        if retry_429:
+            time.sleep(3)
+            return _get(path, retry_429=False)
         raise T212Error("Trading212 rate limit hit — wait ~30s and press Refresh.")
     if resp.status_code in (401, 403):
         raise T212Error(
-            "Trading212 rejected the API key (401/403). Check the key in .env and "
-            "that it has account + portfolio read scopes."
+            "Trading212 rejected the credentials (401/403). Check both T212_API_KEY "
+            "and T212_API_SECRET in .env and that the key has read scopes."
         )
     resp.raise_for_status()
     return resp.json()
 
 
-def fetch_cash() -> dict:
-    """Account cash in the account currency (CZK): free, invested, total, ppl..."""
-    return _get("/equity/account/cash")
+def fetch_summary() -> dict:
+    """Account summary: cash, investments value, currency, total value."""
+    return _get("/equity/account/summary")
+
+
+def free_cash(summary: dict) -> float:
+    """Cash available to trade, tolerant of schema nesting variations."""
+    cash = summary.get("cash", summary)
+    if isinstance(cash, dict):
+        for key in ("availableToTrade", "free", "available"):
+            if cash.get(key) is not None:
+                return float(cash[key])
+    if isinstance(cash, (int, float)):
+        return float(cash)
+    return 0.0
 
 
 def fetch_instruments() -> list[dict]:
@@ -94,25 +110,33 @@ def yf_ticker_for(t212_ticker: str, short_name: str, currency: str) -> str | Non
     return short_name or None
 
 
+def _first(d: dict, *keys, default=None):
+    for k in keys:
+        if d.get(k) is not None:
+            return d[k]
+    return default
+
+
 def fetch_positions() -> list[dict]:
     """Open positions normalized to the app's unified shape."""
     instruments = {i["ticker"]: i for i in fetch_instruments()}
     positions = []
-    for p in _get("/equity/portfolio"):
-        info = instruments.get(p["ticker"], {})
-        short = info.get("shortName") or p["ticker"].split("_")[0]
+    for p in _get("/equity/positions"):
+        t212_ticker = _first(p, "ticker", "instrument", default="")
+        info = instruments.get(t212_ticker, {})
+        short = info.get("shortName") or str(t212_ticker).split("_")[0]
         currency = info.get("currencyCode", "USD")
         positions.append(
             {
                 "ticker": short,
-                "t212_ticker": p["ticker"],
-                "yf_ticker": yf_ticker_for(p["ticker"], short, currency),
+                "t212_ticker": t212_ticker,
+                "yf_ticker": yf_ticker_for(t212_ticker, short, currency),
                 "name": info.get("name", short),
-                "shares": float(p["quantity"]),
-                "avg_price": float(p.get("averagePrice") or 0.0),
+                "shares": float(_first(p, "quantity", "shares", default=0.0)),
+                "avg_price": float(_first(p, "averagePrice", "averagePricePaid", default=0.0)),
                 "currency": currency,
-                "t212_price": p.get("currentPrice"),
-                "t212_ppl_czk": p.get("ppl"),  # P/L already in account currency
+                "t212_price": _first(p, "currentPrice", "price"),
+                "t212_ppl_czk": _first(p, "ppl", "unrealizedProfitLoss"),
             }
         )
     return positions

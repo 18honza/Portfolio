@@ -47,7 +47,7 @@ def load_quote_currencies(tickers: tuple) -> dict:
 
 @st.cache_data(ttl=120, show_spinner="Reading Trading212 account…")
 def load_t212() -> tuple[list, dict]:
-    return t212.fetch_positions(), t212.fetch_cash()
+    return t212.fetch_positions(), t212.fetch_summary()
 
 
 # ---------------------------------------------------------------- sidebar
@@ -73,8 +73,8 @@ t212_error = None
 
 if source == "Trading212 API":
     try:
-        positions, cash_raw = load_t212()
-        cash_czk = float(cash_raw.get("free") or 0.0)
+        positions, summary = load_t212()
+        cash_czk = t212.free_cash(summary)
     except Exception as exc:  # T212Error, network, etc.
         t212_error = str(exc)
 else:

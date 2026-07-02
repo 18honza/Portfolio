@@ -21,4 +21,5 @@ DEFAULT_BENCHMARK = "SPY"
 PRICE_CACHE_TTL = 300  # seconds — prices auto-refresh on this cadence
 
 T212_API_KEY = os.getenv("T212_API_KEY", "")
+T212_API_SECRET = os.getenv("T212_API_SECRET", "")
 T212_BASE_URL = os.getenv("T212_BASE_URL", "https://live.trading212.com/api/v0")
