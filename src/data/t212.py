@@ -119,6 +119,103 @@ def _first(d: dict, *keys, default=None):
     return default
 
 
+def _short_name(t212_ticker: str) -> str:
+    base = str(t212_ticker).split("_")[0]
+    return base[:-1] if len(base) > 1 and base[-1].islower() else base
+
+
+def fetch_pending_orders() -> list[dict]:
+    """Working orders (limit/stop) — the money behind 'reservedForOrders'."""
+    orders = []
+    for o in _get("/equity/orders"):
+        inst = o.get("instrument") or {}
+        t212_ticker = str(inst.get("ticker") or o.get("ticker") or "")
+        short = _short_name(t212_ticker)
+        currency = _first(inst, "currency", "currencyCode", default="USD")
+        orders.append(
+            {
+                "ticker": short,
+                "name": inst.get("name", short),
+                "yf_ticker": yf_ticker_for(t212_ticker, short, currency),
+                "side": o.get("side"),
+                "type": o.get("type"),
+                "quantity": o.get("quantity"),
+                "filled": o.get("filledQuantity"),
+                "limit_price": o.get("limitPrice"),
+                "stop_price": o.get("stopPrice"),
+                "currency": currency,
+                "tif": o.get("timeInForce"),
+                "created": str(o.get("createdAt") or "")[:16].replace("T", " "),
+            }
+        )
+    return orders
+
+
+def _next_path(endpoint: str, next_page: str | None) -> str | None:
+    """T212 returns nextPagePath as either a path or a bare query string."""
+    if not next_page:
+        return None
+    if next_page.startswith("/"):
+        return next_page.removeprefix("/api/v0")
+    return f"{endpoint}?{next_page}"
+
+
+def fetch_order_history(max_pages: int = 3) -> list[dict]:
+    """Filled/cancelled orders, newest first — entry/exit history per position."""
+    items: list[dict] = []
+    path = "/equity/history/orders?limit=50"
+    for _ in range(max_pages):
+        data = _get(path)
+        for it in data.get("items", []):
+            o = it.get("order") or {}
+            f = it.get("fill") or {}
+            inst = o.get("instrument") or {}
+            t212_ticker = str(inst.get("ticker") or o.get("ticker") or "")
+            wallet = f.get("walletImpact") or {}
+            items.append(
+                {
+                    "ticker": _short_name(t212_ticker),
+                    "name": inst.get("name", _short_name(t212_ticker)),
+                    "side": o.get("side"),
+                    "type": o.get("type"),
+                    "status": o.get("status"),
+                    "quantity": o.get("quantity"),
+                    "fill_price": f.get("price"),
+                    "value_czk": wallet.get("netValue"),
+                    "when": str(f.get("filledAt") or o.get("createdAt") or "")[:16].replace("T", " "),
+                }
+            )
+        path = _next_path("/equity/history/orders", data.get("nextPagePath"))
+        if not path:
+            break
+        time.sleep(1)  # be polite to the rate limiter
+    return items
+
+
+def net_deposits(max_pages: int = 12) -> float | None:
+    """Sum of deposits/withdrawals across full history, or None if the API's
+    cursor pagination gives out before we reach the end (known T212 quirk)."""
+    total = 0.0
+    path = "/history/transactions?limit=50"
+    for _ in range(max_pages):
+        try:
+            data = _get(path)
+        except (requests.HTTPError, T212Error):
+            return None
+        for tr in data.get("items", []):
+            kind = str(tr.get("type", "")).upper()
+            amount = float(tr.get("amount") or 0.0)
+            if "DEPOSIT" in kind:
+                total += amount
+            elif "WITHDRAW" in kind:
+                total -= abs(amount)
+        path = _next_path("/history/transactions", data.get("nextPagePath"))
+        if not path:
+            return total
+        time.sleep(1)
+    return None  # more history than we paged through — total would be wrong
+
+
 def fetch_positions() -> list[dict]:
     """Open positions normalized to the app's unified shape.
 

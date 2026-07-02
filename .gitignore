@@ -16,3 +16,6 @@ data/positions_meta.json
 
 # OS
 .DS_Store
+
+# Local account snapshots
+data/account_history.csv

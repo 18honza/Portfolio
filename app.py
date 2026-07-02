@@ -14,7 +14,7 @@ import streamlit as st
 
 from src import config
 from src.analytics import metrics, optimizer, signals
-from src.data import fx, prices, store, t212
+from src.data import fx, prices, snapshots, store, t212
 
 st.set_page_config(page_title="Portfolio Command Center", page_icon="📈", layout="wide")
 
@@ -50,6 +50,21 @@ def load_t212() -> tuple[list, dict]:
     return t212.fetch_positions(), t212.fetch_summary()
 
 
+@st.cache_data(ttl=120, show_spinner=False)
+def load_t212_orders() -> list:
+    return t212.fetch_pending_orders()
+
+
+@st.cache_data(ttl=900, show_spinner=False)
+def load_t212_order_history() -> list:
+    return t212.fetch_order_history()
+
+
+@st.cache_data(ttl=3600, show_spinner=False)
+def load_net_deposits() -> float | None:
+    return t212.net_deposits()
+
+
 # ---------------------------------------------------------------- sidebar
 with st.sidebar:
     st.title("📈 Command Center")
@@ -70,6 +85,7 @@ with st.sidebar:
 positions: list[dict] = []
 cash_czk = 0.0
 t212_error = None
+summary: dict = {}
 
 if source == "Trading212 API":
     try:
@@ -171,6 +187,7 @@ for p in positions:
 df = pd.DataFrame(rows)
 invested_czk = float(df[f"Value {CZK}"].sum()) if not df.empty else 0.0
 total_czk = invested_czk + cash_czk
+snapshots.record(total_czk, invested_czk, cash_czk)  # builds the equity curve day by day
 if not df.empty and invested_czk:
     df["Weight %"] = df[f"Value {CZK}"] / invested_czk * 100
 
@@ -206,8 +223,8 @@ if missing_data:
         "Fix the mapping in data/ticker_map.json or set the Yahoo ticker in the editor."
     )
 
-tab_overview, tab_positions, tab_plays, tab_opt, tab_risk = st.tabs(
-    ["📊 Overview", "📌 Positions & Signals", "🎯 Plays & Research", "⚖️ Optimizer", "⚠️ Risk"]
+tab_overview, tab_positions, tab_orders, tab_plays, tab_opt, tab_risk = st.tabs(
+    ["📊 Overview", "📌 Positions & Signals", "🧾 Orders & History", "🎯 Plays & Research", "⚖️ Optimizer", "⚠️ Risk"]
 )
 
 # ---------------------------------------------------------------- OVERVIEW
@@ -235,18 +252,41 @@ with tab_overview:
             pie.update_layout(margin=dict(t=40, b=0, l=0, r=0), height=350)
             st.plotly_chart(pie, use_container_width=True)
         with right:
+            snap = snapshots.load()
+            curve = go.Figure()
             if len(value_series) > 2:
-                curve = go.Figure()
                 curve.add_trace(
-                    go.Scatter(x=value_series.index, y=value_series.values, fill="tozeroy", name="Portfolio")
+                    go.Scatter(
+                        x=value_series.index,
+                        y=value_series.values,
+                        fill="tozeroy",
+                        name="Holdings (reconstructed)",
+                        line=dict(color="#4F8BF9"),
+                    )
                 )
-                curve.update_layout(
-                    title=f"Portfolio value ({CZK}, current FX, current share counts)",
-                    height=350,
-                    margin=dict(t=40, b=0, l=0, r=0),
-                    yaxis_title=CZK,
+            if len(snap) >= 2:
+                curve.add_trace(
+                    go.Scatter(
+                        x=snap["date"],
+                        y=snap["total_czk"],
+                        name="Account total (recorded daily)",
+                        line=dict(color="#54a24b", width=3),
+                    )
                 )
-                st.plotly_chart(curve, use_container_width=True)
+            curve.update_layout(
+                title=f"Portfolio value ({CZK})",
+                height=350,
+                margin=dict(t=40, b=0, l=0, r=0),
+                yaxis_title=CZK,
+                legend=dict(orientation="h", y=-0.15),
+            )
+            st.plotly_chart(curve, use_container_width=True)
+            if len(snap) < 2:
+                st.caption(
+                    "Blue curve = current holdings priced back in time. The true account "
+                    "total (incl. cash) is snapshotted daily from today — the green curve "
+                    "appears after a couple of days."
+                )
 
         bar = px.bar(
             df.sort_values(f"P/L {CZK}"),
@@ -333,6 +373,97 @@ with tab_positions:
                     store.save_meta(meta_all)
                     st.success("Plan saved.")
                     st.rerun()
+
+# ---------------------------------------------------------------- ORDERS & HISTORY
+with tab_orders:
+    if source != "Trading212 API":
+        st.info("Connect the Trading212 API (sidebar) to see cash breakdown, pending orders and fill history.")
+    elif t212_error:
+        st.error(f"Trading212: {t212_error}")
+    else:
+        cash_detail = summary.get("cash", {}) if isinstance(summary.get("cash"), dict) else {}
+        invest_detail = summary.get("investments", {}) if isinstance(summary.get("investments"), dict) else {}
+        c = st.columns(5)
+        c[0].metric("Cash available", czk(cash_detail.get("availableToTrade")))
+        c[1].metric("Reserved for orders", czk(cash_detail.get("reservedForOrders")))
+        c[2].metric("Realized P/L (all-time)", czk(invest_detail.get("realizedProfitLoss")))
+        deposits = None
+        try:
+            deposits = load_net_deposits()
+        except Exception:
+            pass
+        c[3].metric(
+            "Net deposits",
+            czk(deposits) if deposits is not None else "—",
+            help="Unavailable when the account has more transaction history than the API pages out.",
+        )
+        alltime = (invest_detail.get("realizedProfitLoss") or 0.0) + (
+            invest_detail.get("unrealizedProfitLoss") or 0.0
+        )
+        c[4].metric("All-time P/L (trades)", czk(alltime) if invest_detail else "—")
+
+        st.subheader("Pending orders")
+        try:
+            pending = load_t212_orders()
+        except Exception as exc:
+            pending = []
+            st.error(f"Could not load orders: {exc}")
+        if pending:
+            pend_df = pd.DataFrame(pending)
+            order_quotes = load_history(tuple(sorted({o["yf_ticker"] for o in pending if o["yf_ticker"]})), "5d")
+            pend_df["current"] = pend_df["yf_ticker"].map(
+                lambda t: prices.latest_and_daychange(order_quotes[t])[0] if t in order_quotes.columns else np.nan
+            )
+            pend_df["distance %"] = (pend_df["limit_price"] / pend_df["current"] - 1) * 100
+            show_cols = ["ticker", "side", "type", "quantity", "limit_price", "current", "distance %", "tif", "created"]
+            st.dataframe(
+                pend_df[show_cols],
+                use_container_width=True,
+                hide_index=True,
+                column_config={
+                    "distance %": st.column_config.NumberColumn(
+                        format="%+.1f%%", help="How far the limit sits from the current price"
+                    ),
+                },
+            )
+            st.caption(
+                "These orders are why part of your cash shows as reserved. "
+                "Cancel/modify them in the Trading212 app — this dashboard never touches orders."
+            )
+        else:
+            st.success("No pending orders.")
+
+        st.subheader("Order history (fills)")
+        try:
+            history_rows = load_t212_order_history()
+        except Exception as exc:
+            history_rows = []
+            st.error(f"Could not load order history: {exc}")
+        if history_rows:
+            hist_df = pd.DataFrame(history_rows)
+            hist_df = hist_df[hist_df["status"].isin(["FILLED", "PARTIALLY_FILLED", "CANCELLED", "REJECTED"])]
+            st.dataframe(
+                hist_df[["when", "ticker", "side", "type", "status", "quantity", "fill_price", "value_czk"]],
+                use_container_width=True,
+                hide_index=True,
+                column_config={
+                    "value_czk": st.column_config.NumberColumn(f"Value {CZK}", format="%.0f"),
+                },
+            )
+
+        snap = snapshots.load()
+        st.subheader("Account value history")
+        if len(snap) >= 2:
+            sfig = go.Figure()
+            for col, name in (("total_czk", "Total"), ("invested_czk", "Invested"), ("cash_czk", "Cash")):
+                sfig.add_trace(go.Scatter(x=snap["date"], y=snap[col], name=name))
+            sfig.update_layout(height=320, margin=dict(t=20), yaxis_title=CZK)
+            st.plotly_chart(sfig, use_container_width=True)
+        else:
+            st.caption(
+                f"Snapshot recorded for today ({czk(total_czk)}). One row per day is stored in "
+                "data/account_history.csv whenever the dashboard runs — the chart appears from day 2."
+            )
 
 # ---------------------------------------------------------------- PLAYS & RESEARCH
 with tab_plays:
