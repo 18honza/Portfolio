@@ -12,11 +12,13 @@ import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
 
-from src import config
+from src import config, ui
 from src.analytics import metrics, optimizer, signals
 from src.data import fx, prices, snapshots, store, t212
 
 st.set_page_config(page_title="Portfolio Command Center", page_icon="📈", layout="wide")
+ui.inject_css()
+ui.use_design_defaults()
 
 CZK = config.ACCOUNT_CURRENCY
 
@@ -32,6 +34,11 @@ def pct(x: float, digits: int = 1) -> str:
 def md(text) -> str:
     """Escape $ so Streamlit doesn't render price levels as LaTeX."""
     return str(text or "").replace("$", "\\$")
+
+
+def czk0(x: float) -> str:
+    """Bare number for metric values — the CZK unit lives in the label."""
+    return "—" if x is None or x != x else f"{x:,.0f}"
 
 
 # ---------------------------------------------------------------- cached IO
@@ -72,7 +79,12 @@ def load_net_deposits() -> float | None:
 
 # ---------------------------------------------------------------- sidebar
 with st.sidebar:
-    st.title("📈 Command Center")
+    st.markdown(
+        '<div class="pcc-title" style="font-size:17px">Command Center</div>'
+        '<div class="pcc-sub">Local · Free · Manual orders</div>',
+        unsafe_allow_html=True,
+    )
+    st.write("")
     default_source = 1 if config.T212_API_KEY else 0
     source = st.radio("Portfolio source", ["Manual", "Trading212 API"], index=default_source)
     period = st.selectbox("History window", ["6mo", "1y", "2y"], index=1)
@@ -213,7 +225,7 @@ as_of = plays.get("as_of")
 research_age = (date.today() - signals.parse_date(as_of)).days if signals.parse_date(as_of) else None
 h1, h2 = st.columns([3, 1])
 with h1:
-    st.title("Portfolio Command Center")
+    ui.brand_header()
 with h2:
     if research_age is None:
         st.warning("No research yet — run `/daily-research`")
@@ -244,18 +256,17 @@ with tab_overview:
             float((df["Day %"] * df[f"Value {CZK}"]).sum() / invested_czk) if invested_czk else np.nan
         )
         c = st.columns(6)
-        c[0].metric("Account value", czk(total_czk))
-        c[1].metric("Invested", czk(invested_czk), f"cash {czk(cash_czk)}")
-        c[2].metric("Open P/L", czk(float(df[f'P/L {CZK}'].sum())))
+        c[0].metric("Account value · CZK", czk0(total_czk))
+        c[1].metric("Invested · CZK", czk0(invested_czk), f"cash {czk0(cash_czk)}")
+        c[2].metric("Open P/L · CZK", czk0(float(df[f'P/L {CZK}'].sum())))
         c[3].metric("Day", pct(day_pnl_pct, 2))
         c[4].metric("Sharpe", f"{metrics.sharpe(port_returns, rf):.2f}" if len(port_returns) > 20 else "—")
         c[5].metric("Max DD", pct(metrics.max_drawdown(port_returns) * 100) if len(port_returns) > 20 else "—")
 
         left, right = st.columns([1, 2])
         with left:
-            pie = px.pie(df, values=f"Value {CZK}", names="Ticker", hole=0.45, title="Allocation")
-            pie.update_layout(margin=dict(t=40, b=0, l=0, r=0), height=350)
-            st.plotly_chart(pie, use_container_width=True)
+            pie = px.pie(df, values=f"Value {CZK}", names="Ticker", hole=0.55, title="Allocation")
+            st.plotly_chart(ui.style_fig(pie, 350), use_container_width=True)
         with right:
             snap = snapshots.load()
             curve = go.Figure()
@@ -266,7 +277,8 @@ with tab_overview:
                         y=value_series.values,
                         fill="tozeroy",
                         name="Holdings (reconstructed)",
-                        line=dict(color="#4F8BF9"),
+                        line=dict(color=ui.BLUE, width=1.6),
+                        fillcolor="rgba(94,139,214,0.10)",
                     )
                 )
             if len(snap) >= 2:
@@ -275,17 +287,15 @@ with tab_overview:
                         x=snap["date"],
                         y=snap["total_czk"],
                         name="Account total (recorded daily)",
-                        line=dict(color="#54a24b", width=3),
+                        line=dict(color=ui.GREEN, width=2.4),
                     )
                 )
             curve.update_layout(
                 title=f"Portfolio value ({CZK})",
-                height=350,
-                margin=dict(t=40, b=0, l=0, r=0),
                 yaxis_title=CZK,
                 legend=dict(orientation="h", y=-0.15),
             )
-            st.plotly_chart(curve, use_container_width=True)
+            st.plotly_chart(ui.style_fig(curve, 350), use_container_width=True)
             if len(snap) < 2:
                 st.caption(
                     "Blue curve = current holdings priced back in time. The true account "
@@ -299,11 +309,11 @@ with tab_overview:
             y="Ticker",
             orientation="h",
             color=f"P/L {CZK}",
-            color_continuous_scale=["#e45756", "#888888", "#54a24b"],
+            color_continuous_scale=[ui.RED, "#3A3D42", ui.GREEN],
             title="Open P/L by position",
         )
-        bar.update_layout(height=max(250, 40 * len(df)), coloraxis_showscale=False, margin=dict(t=40, b=0))
-        st.plotly_chart(bar, use_container_width=True)
+        bar.update_layout(coloraxis_showscale=False)
+        st.plotly_chart(ui.style_fig(bar, max(250, 42 * len(df))), use_container_width=True)
 
 # ---------------------------------------------------------------- POSITIONS & SIGNALS
 with tab_positions:
@@ -389,23 +399,23 @@ with tab_orders:
         cash_detail = summary.get("cash", {}) if isinstance(summary.get("cash"), dict) else {}
         invest_detail = summary.get("investments", {}) if isinstance(summary.get("investments"), dict) else {}
         c = st.columns(5)
-        c[0].metric("Cash available", czk(cash_detail.get("availableToTrade")))
-        c[1].metric("Reserved for orders", czk(cash_detail.get("reservedForOrders")))
-        c[2].metric("Realized P/L (all-time)", czk(invest_detail.get("realizedProfitLoss")))
+        c[0].metric("Cash available · CZK", czk0(cash_detail.get("availableToTrade")))
+        c[1].metric("Reserved for orders · CZK", czk0(cash_detail.get("reservedForOrders")))
+        c[2].metric("Realized P/L all-time · CZK", czk0(invest_detail.get("realizedProfitLoss")))
         deposits = None
         try:
             deposits = load_net_deposits()
         except Exception:
             pass
         c[3].metric(
-            "Net deposits",
-            czk(deposits) if deposits is not None else "—",
+            "Net deposits · CZK",
+            czk0(deposits) if deposits is not None else "—",
             help="Unavailable when the account has more transaction history than the API pages out.",
         )
         alltime = (invest_detail.get("realizedProfitLoss") or 0.0) + (
             invest_detail.get("unrealizedProfitLoss") or 0.0
         )
-        c[4].metric("All-time P/L (trades)", czk(alltime) if invest_detail else "—")
+        c[4].metric("All-time P/L trades · CZK", czk0(alltime) if invest_detail else "—")
 
         st.subheader("Pending orders")
         try:
@@ -460,10 +470,14 @@ with tab_orders:
         st.subheader("Account value history")
         if len(snap) >= 2:
             sfig = go.Figure()
-            for col, name in (("total_czk", "Total"), ("invested_czk", "Invested"), ("cash_czk", "Cash")):
-                sfig.add_trace(go.Scatter(x=snap["date"], y=snap[col], name=name))
-            sfig.update_layout(height=320, margin=dict(t=20), yaxis_title=CZK)
-            st.plotly_chart(sfig, use_container_width=True)
+            for col, name, color in (
+                ("total_czk", "Total", ui.GREEN),
+                ("invested_czk", "Invested", ui.BLUE),
+                ("cash_czk", "Cash", ui.FAINT),
+            ):
+                sfig.add_trace(go.Scatter(x=snap["date"], y=snap[col], name=name, line=dict(color=color, width=2)))
+            sfig.update_layout(yaxis_title=CZK)
+            st.plotly_chart(ui.style_fig(sfig, 320), use_container_width=True)
         else:
             st.caption(
                 f"Snapshot recorded for today ({czk(total_czk)}). One row per day is stored in "
@@ -570,11 +584,15 @@ with tab_opt:
                         y=frontier["ret"] * 100,
                         mode="lines+markers",
                         name="Efficient frontier",
-                        marker=dict(color=frontier["sharpe"], colorscale="Viridis", size=7),
+                        line=dict(color="rgba(94,139,214,0.5)", width=1.5),
+                        marker=dict(color=frontier["sharpe"], colorscale=[[0, "#5A606B"], [1, ui.GREEN]], size=7),
                         hovertemplate="vol %{x:.1f}% · ret %{y:.1f}%<extra></extra>",
                     )
                 )
-                for w, name, symbol in ((w_sharpe, "Max Sharpe", "star"), (w_minvol, "Min volatility", "diamond")):
+                for w, name, symbol, color in (
+                    (w_sharpe, "Max Sharpe", "star", ui.GOLD),
+                    (w_minvol, "Min volatility", "diamond", ui.PURPLE),
+                ):
                     s = optimizer.portfolio_stats(w, mu, cov, rf)
                     fig.add_trace(
                         go.Scatter(
@@ -584,7 +602,7 @@ with tab_opt:
                             name=name,
                             text=[name],
                             textposition="top center",
-                            marker=dict(size=16, symbol=symbol),
+                            marker=dict(size=15, symbol=symbol, color=color),
                         )
                     )
                 if not df.empty:
@@ -601,16 +619,14 @@ with tab_opt:
                                 name="Current portfolio",
                                 text=["Current"],
                                 textposition="bottom center",
-                                marker=dict(size=16, symbol="x", color="#e45756"),
+                                marker=dict(size=15, symbol="x", color=ui.RED),
                             )
                         )
                 fig.update_layout(
                     xaxis_title="Annualized volatility (%)",
                     yaxis_title="Annualized return (%)",
-                    height=480,
-                    margin=dict(t=20),
                 )
-                st.plotly_chart(fig, use_container_width=True)
+                st.plotly_chart(ui.style_fig(fig, 480), use_container_width=True)
 
                 comp = pd.DataFrame(
                     {
@@ -653,21 +669,27 @@ with tab_risk:
                 heat = px.imshow(
                     corr,
                     text_auto=".2f",
-                    color_continuous_scale="RdBu_r",
+                    color_continuous_scale=[[0, ui.BLUE], [0.5, "#111214"], [1, ui.RED]],
                     zmin=-1,
                     zmax=1,
                     title="Correlation matrix (daily returns)",
                 )
-                heat.update_layout(height=420, margin=dict(t=40))
-                st.plotly_chart(heat, use_container_width=True)
+                st.plotly_chart(ui.style_fig(heat, 420), use_container_width=True)
         with cr:
             if len(port_returns) > 20:
                 dd = metrics.drawdown_series(port_returns) * 100
-                ddfig = go.Figure(go.Scatter(x=dd.index, y=dd.values, fill="tozeroy", line=dict(color="#e45756")))
-                ddfig.update_layout(title="Portfolio drawdown (%)", height=420, margin=dict(t=40))
-                st.plotly_chart(ddfig, use_container_width=True)
+                ddfig = go.Figure(
+                    go.Scatter(
+                        x=dd.index,
+                        y=dd.values,
+                        fill="tozeroy",
+                        line=dict(color=ui.RED, width=1.6),
+                        fillcolor="rgba(224,108,117,0.12)",
+                    )
+                )
+                ddfig.update_layout(title="Portfolio drawdown (%)")
+                st.plotly_chart(ui.style_fig(ddfig, 420), use_container_width=True)
 
         cur_exp = df.groupby("CCY")[f"Value {CZK}"].sum().reset_index()
-        cpie = px.pie(cur_exp, values=f"Value {CZK}", names="CCY", hole=0.45, title="Currency exposure")
-        cpie.update_layout(height=330, margin=dict(t=40, b=0))
-        st.plotly_chart(cpie, use_container_width=True)
+        cpie = px.pie(cur_exp, values=f"Value {CZK}", names="CCY", hole=0.55, title="Currency exposure")
+        st.plotly_chart(ui.style_fig(cpie, 330), use_container_width=True)
