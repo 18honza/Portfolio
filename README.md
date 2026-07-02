@@ -23,11 +23,12 @@ Opens at http://localhost:8501.
 
 ### Portfolio input — two options
 
-1. **Trading212 API (read-only)** — in the Trading212 app: *Settings → API (Beta)*,
-   generate a key with account/portfolio **read** scopes, then:
+1. **Trading212 API (read-only)** — in the Trading212 app: *Settings → API*,
+   generate a key pair with account/portfolio **read** scopes, then:
    ```bash
-   cp .env.example .env   # paste the key into T212_API_KEY
+   cp .env.example .env   # paste both keys: T212_API_KEY and T212_API_SECRET
    ```
+   (The API uses HTTP Basic auth — both the key and the secret are required.)
 2. **Manual** — use the *Manual portfolio editor* in the sidebar
    (see `data/portfolio.sample.json` for the format; LSE instruments use
    currency `GBX` with prices in pence).

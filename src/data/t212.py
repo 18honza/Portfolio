@@ -70,12 +70,14 @@ def fetch_summary() -> dict:
 
 
 def free_cash(summary: dict) -> float:
-    """Cash available to trade, tolerant of schema nesting variations."""
+    """All uninvested cash: free + reserved for pending orders + sitting in pies."""
     cash = summary.get("cash", summary)
     if isinstance(cash, dict):
-        for key in ("availableToTrade", "free", "available"):
-            if cash.get(key) is not None:
-                return float(cash[key])
+        return float(
+            (cash.get("availableToTrade") or cash.get("free") or 0.0)
+            + (cash.get("reservedForOrders") or 0.0)
+            + (cash.get("inPies") or 0.0)
+        )
     if isinstance(cash, (int, float)):
         return float(cash)
     return 0.0
@@ -118,25 +120,31 @@ def _first(d: dict, *keys, default=None):
 
 
 def fetch_positions() -> list[dict]:
-    """Open positions normalized to the app's unified shape."""
-    instruments = {i["ticker"]: i for i in fetch_instruments()}
+    """Open positions normalized to the app's unified shape.
+
+    The positions payload nests instrument info and a walletImpact block with
+    values already converted to the account currency (CZK).
+    """
     positions = []
     for p in _get("/equity/positions"):
-        t212_ticker = _first(p, "ticker", "instrument", default="")
-        info = instruments.get(t212_ticker, {})
-        short = info.get("shortName") or str(t212_ticker).split("_")[0]
-        currency = info.get("currencyCode", "USD")
+        inst = p.get("instrument") or {}
+        t212_ticker = str(inst.get("ticker") or _first(p, "ticker", default=""))
+        base = t212_ticker.split("_")[0]
+        short = base[:-1] if len(base) > 1 and base[-1].islower() else base
+        currency = _first(inst, "currency", "currencyCode", default="USD")
+        wallet = p.get("walletImpact") or {}
         positions.append(
             {
                 "ticker": short,
                 "t212_ticker": t212_ticker,
                 "yf_ticker": yf_ticker_for(t212_ticker, short, currency),
-                "name": info.get("name", short),
+                "name": inst.get("name", short),
                 "shares": float(_first(p, "quantity", "shares", default=0.0)),
-                "avg_price": float(_first(p, "averagePrice", "averagePricePaid", default=0.0)),
+                "avg_price": float(_first(p, "averagePricePaid", "averagePrice", default=0.0)),
                 "currency": currency,
                 "t212_price": _first(p, "currentPrice", "price"),
-                "t212_ppl_czk": _first(p, "ppl", "unrealizedProfitLoss"),
+                "t212_ppl_czk": _first(wallet, "unrealizedProfitLoss", default=p.get("ppl")),
+                "t212_value_czk": wallet.get("currentValue"),
             }
         )
     return positions
