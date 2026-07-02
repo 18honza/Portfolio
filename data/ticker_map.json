@@ -1,3 +1,7 @@
 {
-  "_comment": "Manual overrides: Trading212 ticker or short name -> Yahoo Finance symbol. Example: \"VUSAl_EQ\": \"VUSA.L\""
+  "_comment": "Manual overrides: Trading212 ticker or short name -> Yahoo Finance symbol. Example: \"VUSAl_EQ\": \"VUSA.L\"",
+  "YNDX_US_EQ": "NBIS",
+  "YNDX": "NBIS",
+  "CLA_US_EQ": "OUST",
+  "CLA": "OUST"
 }
