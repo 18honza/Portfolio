@@ -1,0 +1,18 @@
+# Environment / secrets
+.env
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+
+# Local caches
+data/.cache/
+
+# Personal portfolio data (kept local by default — remove these lines if you
+# want your positions versioned in the repo)
+data/portfolio.json
+data/positions_meta.json
+
+# OS
+.DS_Store

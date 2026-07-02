@@ -1,0 +1,8 @@
+{
+  "cash_czk": 20000,
+  "positions": [
+    { "ticker": "MU", "yf_ticker": null, "shares": 5, "avg_price": 940.0, "currency": "USD" },
+    { "ticker": "VUSA", "yf_ticker": "VUSA.L", "shares": 10, "avg_price": 104.2, "currency": "GBP" },
+    { "ticker": "SAP", "yf_ticker": "SAP.DE", "shares": 2, "avg_price": 195.0, "currency": "EUR" }
+  ]
+}
