@@ -1,118 +1,106 @@
 {
-  "as_of": "2026-07-02",
-  "generated_by": "claude daily-research 2026-07-02",
-  "market_context": "Worst semiconductor day in years: memory-crisis narrative (IDC forecasts a record -13% smartphone unit decline in 2026), AI-trade revaluation after reports Meta may sell surplus AI compute, and strong labor data cooling rate-cut hopes (Fed's Warsh reaffirming 2% target). Rotation is flowing into financials (all 32 banks passed the Fed stress test; JPM launched a $50B buyback + 10% dividend hike) and healthcare. Note: every current holding AND every pending order sits inside the correcting AI/semi complex — concentration is the #1 portfolio risk today.",
+  "as_of": "2026-07-03",
+  "generated_by": "claude daily-research 2026-07-03",
+  "market_context": "US markets are CLOSED today (July 4 falls on Saturday -> holiday observed Friday); orders can fill Monday Jul 6. Thursday validated the rotation call: Dow +539 to a record close led by Apple/McDonald's/Disney, S&P flat, Nasdaq -0.8% with chips down a second day (MU -7%, AMAT -7.4%, AMD -4.3%) — but QCOM rose against the tide. June jobs came in soft at 57k vs ~114k expected, pushing back Fed-hike talk. Next week: big-bank earnings kick off Jul 14 (JPM held), CPI lands the same week.",
   "position_actions": [
     {
-      "ticker": "MRVL",
-      "action": "SELL 100% at market + CANCEL the buy-limit 2 @ $235",
-      "urgency": "now",
-      "reason": "Three framework red flags stack up: outgoing CFO sold ~half of his equity (insider-selling rule: reduce at least 50%), extreme valuation premium (~66x forward earnings after +196% YTD), and a sell-the-news unwind following the June 22 S&P 500 inclusion. No earnings catalyst until late August, momentum broken (-24% from the June high, closed at its 20-day low, -11% today). It is the weakest holding — framework says cut the weakest first. The pending buy at $235 is averaging down into red flags, which the framework explicitly forbids."
-    },
-    {
       "ticker": "QCOM",
-      "action": "HOLD — keep your existing stop at $171",
+      "action": "HOLD — stop 171 live; first sell 190 is only ~7% away",
       "urgency": "info",
-      "reason": "Your stop order at $171 (-1.9% from entry) is already placed — good discipline. Earnings Jul 29 with guidance already de-risked for memory headwinds ($9.2-10B revenue, automotive +50% YoY). QCOM is -28% from its June high, so the tight stop is appropriate; if it triggers on sector noise, reassess after the print instead of re-entering immediately. Targets if the bounce comes: sell 40% ~$190, rest ~$205."
+      "reason": "Rose to $177 (+1.8%) on Thursday while Micron fell 7% and AMD 4.3% — the market is treating QCOM as the value semi, exactly the thesis. Earnings Jul 29. Your stop order at 171 is live on T212. If the bounce continues, be ready to execute the plan: sell 40% at ~190, don't improvise above it."
     },
     {
       "ticker": "HLIT",
-      "action": "HOLD — set hard stop 12.90, first sell 16.30 (40%)",
-      "urgency": "level",
-      "reason": "Best setup in the book: Q1 broadband revenue +43% YoY, backlog +87% to $582M, raised FY26 guidance, beat EPS by 70% last quarter, and earnings land Jul 27 — a textbook 3-4 week pre-earnings drift play. Today's -10% was pure sector contagion, and it still closed above its 50-day average (~13.66). Plan: stop 12.90 (below the 20-day low and the $13 shelf), sell 40% into strength near 16.30 (prior 20-day high) BEFORE the print, and size down to <=50% if still holding into earnings, per the binary-risk rule."
+      "action": "HOLD — plan unchanged after your add (now 35 shares)",
+      "urgency": "info",
+      "reason": "You added 5 shares at ~14.5, avg now 14.06 — position is ~10.4k CZK (~12% of account), at the top of comfortable for a single mid-cap. No new company news; the pre-earnings drift window into Jul 27 is intact and the stock held its 50-day through the sector rout. Stop 12.90 is live. Do not add more — size discipline."
     },
     {
       "ticker": "CRWV",
-      "action": "HOLD — set hard stop 61.50; second tranche at $65 stays",
-      "urgency": "level",
-      "reason": "The Meta surplus-compute report hit the whole neocloud group and raised real customer-concentration fear; the counterargument is CoreWeave's ~$100B backlog and European buildout. Your pre-planned second tranche at $65 sits right at the 52-week low ($63.80) — a planned add at major support is framework-legal. Combined hard stop 61.50 (a close below the 52-week low breaks the thesis). Recovery targets: sell 40% near $100 (the technical reclaim zone analysts flag), remainder near $118."
+      "action": "HOLD — Meta overhang not resolved, stops and tranche are correctly placed",
+      "urgency": "info",
+      "reason": "Slightly green at $82.99 but the Meta surplus-compute story keeps pressuring the theme (Nebius fell another 17% on it). Your stop at 61.50 and the pre-planned second tranche at 65 are both live — nothing to do. The thesis check remains a close below the 52-week low (63.80)."
     },
     {
       "ticker": "ONDS",
-      "action": "HOLD — set hard stop 6.85",
+      "action": "HOLD — but respect the stop if it triggers Monday",
       "urgency": "level",
-      "reason": "Catalyst-rich: 2026 revenue guide of >=$375M (~7x YoY), $150M+ of Q2 orders, the Mistral merger opening $1B+ of DoD IDIQ access, Cyberhawk acquisition closing in Q3, and the proposed $1.1B 'Drone Dominance' program lifting the whole complex (analyst targets raised to $18 and $25). But the stock closed at a 60-day low, -51% from its high — structure is broken, so risk must be defined: hard stop 6.85 (below the $7.00 shelf). First sell 40% at ~9.80 (50-day MA), second at ~12.00."
+      "reason": "Weakest holding (-294 CZK) at $7.45 with the stop at 6.85 live. A widely-read Seeking Alpha piece this week flags the real issue: strong growth (10x YoY via six acquisitions, $457M backlog) but heavy share dilution tempering per-share gains. The catalyst stack (Cyberhawk close in Q3, defense orders) keeps it a hold — but if the 6.85 stop fires next week, let it fire. Do not lower it."
     },
     {
-      "ticker": "MU",
-      "action": "CANCEL the buy-limit 0.4 @ $900",
-      "urgency": "now",
-      "reason": "The memory-crisis headlines (IDC: record smartphone decline) are aimed at exactly this trade. MU is -23% from its high after a +260% YTD run, closed -5.4% today, and has no earnings until late September — no timer, no visible floor. Don't catch this knife at a round number. Re-entry idea is on the watchlist: $800-840 zone after stabilization (two green closes or a reclaim of the 20-day MA)."
-    },
-    {
-      "ticker": "DRAM",
-      "action": "CANCEL the buy-limit 30 @ EUR 5.80 (Defiance Memory ETF)",
-      "urgency": "now",
-      "reason": "This ETF (DRAM.DE, EUR) made a fresh 52-week low today at 5.84 after -10% — your limit is about to fill on a falling knife. It also duplicates memory exposure you would already have via the MU watchlist and QCOM's handset business. Cutting redundant correlation is free risk reduction."
-    },
-    {
-      "ticker": "OUST",
-      "action": "CANCEL the buy-limit 10 @ $47 until researched (T212 lists it as CLA / Ouster)",
-      "urgency": "now",
-      "reason": "Ouster fell -16% today to $49.94, so the fill is imminent — and there is no thesis on file. Framework rule: no entry without the 3-step research. Ask for a deep dive on OUST tomorrow if you want it; until then an unresearched 10k CZK fill is a coin flip."
+      "ticker": "JPM",
+      "action": "HOLD — thesis strengthening into Jul 14 earnings",
+      "urgency": "info",
+      "reason": "Dow closed at a record Thursday; soft jobs (57k) pushed back rate-hike talk, keeping the buyback-plus-rotation story intact. Your entry 1.2 @ 334.39 with stop 319.5 live matches the plan. First sell 50% at ~345, rest ~356; decide before the Jul 14 print whether to hold through it (earnings plays: size down if unsure)."
     },
     {
       "ticker": "NBIS",
-      "action": "KEEP the buy-limit 2.05 @ $185, but know what it means (T212 lists it as YNDX / Nebius)",
-      "urgency": "info",
-      "reason": "Nebius trades at $211 (-8% today), -30% off its high; $185 is a legitimate deep-pullback add level. But it is the same AI-infrastructure theme as CoreWeave — if both limits fill you are doubling one bet while the theme corrects. Acceptable if intentional; consider halving the order size otherwise."
+      "action": "CANCEL or HALVE the buy-limit 2.05 @ $185 (T212 ticker YNDX)",
+      "urgency": "now",
+      "reason": "Downgrade from yesterday's 'keep, eyes open': Nebius fell 17%+ on the Meta cloud-competition report and bearish takes are multiplying ('the selloff exposes a deeper problem' — Seeking Alpha). The GPU-scarcity premium underpinning its valuation is exactly what Meta threatens. You already own this theme via CoreWeave with a planned add at 65. Adding a THIRD tranche of AI-infra exposure at $185 with no dated catalyst until August earnings is concentration, not conviction. Watchlist trigger: reclaim of $230."
     }
   ],
   "new_plays": [
     {
-      "ticker": "JPM",
-      "yf_ticker": "JPM",
-      "name": "JPMorgan Chase",
-      "type": "earnings",
-      "action": "BUY NOW",
-      "entry_zone": [326, 336],
+      "ticker": "RIVN",
+      "yf_ticker": "RIVN",
+      "name": "Rivian Automotive",
+      "type": "swing",
+      "action": "BUY ON PULLBACK",
+      "entry_zone": [17.8, 18.7],
       "tranches": [
-        { "pct": 50, "condition": "at market (~333)" },
-        { "pct": 50, "condition": "on a pullback to 322-326" }
+        { "pct": 50, "condition": "first pullback into 18.4-18.7 (do NOT chase above 19)" },
+        { "pct": 50, "condition": "deeper fade to 17.9-18.1 if the gap partially fills" }
       ],
-      "first_sell": { "price": 345, "pct": 50 },
-      "second_sell": { "price": 356 },
-      "hard_stop": 319.5,
-      "catalyst": "Q2 earnings + fresh $50B buyback (active since Jul 1) + rotation into financials after all 32 banks passed the Fed stress test",
-      "catalyst_date": "2026-07-14",
-      "hold_period": "1-3 weeks",
-      "risk_reward": "risking ~4.1% to make ~3.6% (first sell) / ~6.9% (full exit) — ~1:1.7, below the usual 1:2 bar, so size modestly",
-      "checklist_score": "4/6 (fails analyst-upside; R:R borderline — passes catalyst, valuation, sentiment, timing)",
-      "suggested_size_czk": 8000,
-      "thesis": "The one trade moving WITH the current rotation instead of against it: banks just cleared the stress test with a record $708B loss scenario, JPM immediately launched a $50B buyback and raised the dividend 10%, sector trades under 20x earnings, and JPM showed clear relative strength today (flat while semis fell 3-11%). Q2 earnings Jul 14 (~$5.61 EPS expected) is the dated catalyst, with pre-earnings drift into it. Equally important: this is the first non-AI position in the book — it directly cuts portfolio concentration.",
-      "risks": "Net-interest-income guidance disappointment on Jul 14; a hot CPI print pushing yields in the wrong direction; low beta means modest upside — this is a discipline/diversification trade, not a moonshot."
+      "first_sell": { "price": 21.5, "pct": 40 },
+      "second_sell": { "price": 23.5 },
+      "hard_stop": 16.4,
+      "catalyst": "Q2 deliveries beat (12,194) + FY26 guidance RAISED to 65-70k vehicles; Q2 earnings Jul 30 is the timer",
+      "catalyst_date": "2026-07-30",
+      "hold_period": "2-4 weeks",
+      "risk_reward": "from ~18.3 entry: risk -10.4% to stop, +17.5% to first sell (1:1.7), +28% to full exit (1:2.7)",
+      "checklist_score": "4/6 (catalyst, sentiment split, timing, R:R pass; analyst-upside unverified; valuation ~3x sales is cheap vs Tesla but the company is still unprofitable)",
+      "suggested_size_czk": 9000,
+      "thesis": "Real dated catalyst chain: Q2 deliveries beat expectations, full-year guidance raised on R1/EDV/R2 momentum, stock +13% Thursday on volume with shorts still engaged (fuel). $4.84B cash plus a $1B Volkswagen investment removes near-term survival risk. Framework rule applies: it jumped ~13-15% on the day, so wait for the first pullback — the play is the drift from the delivery beat into Jul 30 earnings. Also the first position in the book outside tech/financials.",
+      "risks": "Deliveries are not profits — the Jul 30 print shows margins and could unwind the pop; EV demand is macro-sensitive; short-seller theses are active. If it never pulls back into the zone, let it go — no chasing."
     }
   ],
   "watchlist": [
     {
-      "ticker": "NBIS",
-      "yf_ticker": "NBIS",
-      "note": "Nebius (ex-Yandex AI cloud) — your own $185 limit marks the level; -30% off highs",
-      "trigger": "Limit fills at $185, or reclaim of $230 (prev close) turns it into a momentum re-entry"
-    },
-    {
       "ticker": "MU",
       "yf_ticker": "MU",
-      "note": "Micron — great company, broken tape; memory-crisis headlines need to exhaust",
-      "trigger": "800-840 zone AND two consecutive green closes / reclaim of 20-day MA; next earnings late Sept"
+      "note": "Fell another 7% Thursday (~$897) — approaching the 800-840 re-entry zone faster than expected",
+      "trigger": "800-840 AND stabilization (two green closes / reclaim of 20-day MA). No knife-catching before that."
     },
     {
-      "ticker": "OUST",
-      "yf_ticker": "OUST",
-      "note": "Ouster (lidar; T212 code CLA) — fell 16% today; you had an unresearched limit at $47",
-      "trigger": "Run the full 3-step research before any entry — ask for the deep dive"
+      "ticker": "NBIS",
+      "yf_ticker": "NBIS",
+      "note": "Downgraded from order-keep to watchlist — Meta cloud threat hits its core GPU-scarcity premium",
+      "trigger": "Reclaim of $230 on volume, or a signed major non-Meta customer deal"
+    },
+    {
+      "ticker": "AAPL",
+      "yf_ticker": "AAPL",
+      "note": "Led the Dow's record day (+4.8%) — rotation winner inside tech; earnings ~Jul 30",
+      "trigger": "First flag/pullback toward the 20-day MA with the rotation intact"
     },
     {
       "ticker": "META",
       "yf_ticker": "META",
-      "note": "Rotation winner INSIDE tech — led gainers on AI/ad-tech while chips fell; the 'sell surplus compute' story that hurts CRWV helps Meta",
-      "trigger": "Pullback toward its 20-day MA, or pairs-style hedge if AI-infra positions are kept"
+      "note": "The other side of your CRWV risk — its cloud ambitions are what pressures the neoclouds",
+      "trigger": "Pullback toward the 20-day MA; also a natural hedge if AI-infra exposure is kept"
+    },
+    {
+      "ticker": "OUST",
+      "yf_ticker": "OUST",
+      "note": "Ouster (T212 code CLA) — cancelled order stands; still no research on file",
+      "trigger": "Ask for the full 3-step deep dive before any entry"
     },
     {
       "ticker": "XLF",
       "yf_ticker": "XLF",
-      "note": "Financials ETF — the basket alternative if single-name JPM feels too narrow into earnings season",
-      "trigger": "Same catalyst window: big-bank earnings Jul 14-18"
+      "note": "Financials basket through earnings season if JPM works",
+      "trigger": "JPM/BAC beats on Jul 14 with the rotation holding"
     }
   ]
 }
