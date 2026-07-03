@@ -72,3 +72,7 @@ plans: `hard_stop`, `sell1`, `sell1_pct`, `sell2`, `catalyst`, `catalyst_date`,
 - New play candidates must be tradable on Trading212 (any market is fine).
 - Position sizes are suggested in CZK; never exceed ~20% of account per name.
 - Never automate order placement anywhere in this project.
+- Posture: user wants ~85–90% invested by default (small cash buffer for new
+  plays); defensive cash only during active risk-off tapes, and every exit or
+  cancel recommendation must ship with a re-entry trigger (see the
+  daily-research skill).

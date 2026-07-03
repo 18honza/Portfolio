@@ -53,6 +53,19 @@ the user places every order manually. Hold window: days to a few months
 
 7. **Publish**: `git add research/ && git commit -m "research: YYYY-MM-DD daily update" && git push`.
 
+## Portfolio posture (user's standing preference, set 2026-07-03)
+
+- **Default: fully deployed.** Target ~85–90% invested; keep only ~10–15% cash
+  as dry powder for new plays. Free cash above ~15% with no earmarked setup is
+  a problem to solve (find plays), not a neutral state.
+- **Every exit or order-cancellation recommendation MUST be paired with a
+  concrete re-entry trigger** (level + confirmation condition) in the same run.
+  Never leave the account structurally underinvested with no path back in —
+  that is how the July 2026 bounce was partially missed.
+- A defensive cash posture is allowed **only while the tape is actively
+  risk-off** (broad selling, breaking supports). State explicitly in the
+  market context when that condition starts AND when it ends.
+
 ## Hard rules
 
 - Never place, simulate, or queue orders. Text recommendations only.
