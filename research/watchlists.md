@@ -38,3 +38,11 @@ ASTS 85–86→100 s82 · INTC dip 120–125→140 s115 · DRAM 61–62→68 s58
 SPCX 155–157→180 s155 · ONDS dip 7.25–8→16 s6.50 · CRWV 100–102→110 s95
 
 **Long-term (LEAP-style, on dips)**: ALOY 13–14→19+ s12 · MSFT · NVDA · XLF · XLV · IGV · SOXX
+
+## Friend's live positions (expert input — consider, don't blindly follow)
+
+- **QCOM** (added 2026-07-03, via LEAPs): last buy at ~174.5. Supports: 175
+  (put wall + .618 fib), 172.5 (200 EMA). Stop 171. Take profits **190 / 200 /
+  250**. Converges with our plan (stop 171, sell1 190); his 250 is a
+  LEAP-horizon target beyond our swing window — argues for keeping a ~20%
+  runner past the second sell instead of a full exit.
