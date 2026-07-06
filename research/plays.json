@@ -1,106 +1,194 @@
 {
   "as_of": "2026-07-03",
-  "generated_by": "claude daily-research 2026-07-03",
-  "market_context": "US markets are CLOSED today (July 4 falls on Saturday -> holiday observed Friday); orders can fill Monday Jul 6. Thursday validated the rotation call: Dow +539 to a record close led by Apple/McDonald's/Disney, S&P flat, Nasdaq -0.8% with chips down a second day (MU -7%, AMAT -7.4%, AMD -4.3%) — but QCOM rose against the tide. June jobs came in soft at 57k vs ~114k expected, pushing back Fed-hike talk. Next week: big-bank earnings kick off Jul 14 (JPM held), CPI lands the same week.",
+  "generated_by": "claude daily-research 2026-07-03 (evening run, user watchlists integrated)",
+  "market_context": "RISK-OFF CONDITION ENDED per the posture rule: SPY closed 744.78 — above the 742 health trigger — and Thursday was rotation, not crash: defense (LMT +4.6%, SHLD +4.5%), healthcare (MRK +3.3%, NVO +3.4%, XLV +2.6%), software (ADBE +4.1%, ADSK +3.9%) and AAPL (+4.8%) all rallied while semis/AI-infra bled (SOXX -5.6%, INTC -5.3%, TSLA -7.5%). Overnight quotes show the AI names bouncing (QCOM 179, CRWV 84). Markets reopen Monday Jul 6. Plan: redeploy ~25k CZK into the rotation legs — defense, healthcare, mega-cap quality — targeting ~90% invested. Note: Trading212 has NO options — all watchlist options ideas are translated to spot with the same levels.",
   "position_actions": [
     {
       "ticker": "QCOM",
-      "action": "HOLD — stop 171 live; first sell 190 is only ~7% away",
-      "urgency": "info",
-      "reason": "Rose to $177 (+1.8%) on Thursday while Micron fell 7% and AMD 4.3% — the market is treating QCOM as the value semi, exactly the thesis. Earnings Jul 29. Your stop order at 171 is live on T212. If the bounce continues, be ready to execute the plan: sell 40% at ~190, don't improvise above it."
+      "action": "HOLD — sell 40% at 190 if the bounce extends",
+      "urgency": "level",
+      "reason": "Overnight session at ~179 (+2.7% vs Thursday close), your best position (+315 CZK). Balloutt's list has the same read: 'above 178-180 -> 190-200, automotive record.' Earnings Jul 29. Stop 171 live. Execute the plan into strength — first sell 40% at 190, don't move the target up mid-flight."
     },
     {
       "ticker": "HLIT",
-      "action": "HOLD — plan unchanged after your add (now 35 shares)",
+      "action": "HOLD — pre-earnings drift into Jul 27 intact",
       "urgency": "info",
-      "reason": "You added 5 shares at ~14.5, avg now 14.06 — position is ~10.4k CZK (~12% of account), at the top of comfortable for a single mid-cap. No new company news; the pre-earnings drift window into Jul 27 is intact and the stock held its 50-day through the sector rout. Stop 12.90 is live. Do not add more — size discipline."
+      "reason": "+145 CZK, overnight 14.25. Thursday's -10.8% Yahoo print vs T212's firmer quote reflects thin holiday tape — the setup is unchanged: backlog +87%, raised guidance, sell 40% at 16.30 before the print. Stop 12.90 live. Position capped at 35 shares."
     },
     {
       "ticker": "CRWV",
-      "action": "HOLD — Meta overhang not resolved, stops and tranche are correctly placed",
-      "urgency": "info",
-      "reason": "Slightly green at $82.99 but the Meta surplus-compute story keeps pressuring the theme (Nebius fell another 17% on it). Your stop at 61.50 and the pre-planned second tranche at 65 are both live — nothing to do. The thesis check remains a close below the 52-week low (63.80)."
+      "action": "HOLD — your own trigger is 'above 85'; first sell stays 100",
+      "urgency": "level",
+      "reason": "Overnight ~83.8, knocking on the 85 trigger from your priority watch (above 85 -> 100-110). Our plan already owns this: stop 61.50 live, tranche at 65 reserved, sell1 100 / sell2 118. If 85 breaks and holds Monday, the momentum leg begins — nothing to do but let it work. Meta-overhang risk unchanged."
     },
     {
       "ticker": "ONDS",
-      "action": "HOLD — but respect the stop if it triggers Monday",
+      "action": "HOLD — keep stop 6.85, do NOT widen it to Balloutt's 6.50",
       "urgency": "level",
-      "reason": "Weakest holding (-294 CZK) at $7.45 with the stop at 6.85 live. A widely-read Seeking Alpha piece this week flags the real issue: strong growth (10x YoY via six acquisitions, $457M backlog) but heavy share dilution tempering per-share gains. The catalyst stack (Cyberhawk close in Q3, defense orders) keeps it a hold — but if the 6.85 stop fires next week, let it fire. Do not lower it."
+      "reason": "Weakest holding (-140 CZK), overnight 7.58. Balloutt's dip zone 7.25-8.00 with stop 6.50 broadly matches our plan, but our stop was set at 6.85 first — the framework forbids lowering a stop to 'give it more room.' Catalysts (Cyberhawk Q3 close, 670% YoY growth narrative, defense budget tailwind that just lifted the whole sector) justify the hold while the stop holds."
     },
     {
       "ticker": "JPM",
-      "action": "HOLD — thesis strengthening into Jul 14 earnings",
+      "action": "HOLD — earnings Jul 14; decide hold-through vs trim by Jul 11",
       "urgency": "info",
-      "reason": "Dow closed at a record Thursday; soft jobs (57k) pushed back rate-hike talk, keeping the buyback-plus-rotation story intact. Your entry 1.2 @ 334.39 with stop 319.5 live matches the plan. First sell 50% at ~345, rest ~356; decide before the Jul 14 print whether to hold through it (earnings plays: size down if unsure)."
+      "reason": "Flat (-33 CZK) while the rotation broadens — financials +1.5% Thursday (XLF). Buyback active, stop 319.5 live, sells 345/356. By Friday Jul 11 decide: hold full size through the print (binary risk) or trim half. Default per framework: size down if no strong view on the print."
+    },
+    {
+      "ticker": "RIVN",
+      "action": "KEEP the buy-limit 23 @ 18.50 — well placed",
+      "urgency": "info",
+      "reason": "You placed the tranche exactly in the zone (closed Thursday 18.63 after +8.4%). If it fills Monday, the stop is 16.40 and sells are 21.50 (40%) / 23.50 per the play. If RIVN gaps up and runs instead, let it go — no chasing above 19."
     },
     {
       "ticker": "NBIS",
-      "action": "CANCEL or HALVE the buy-limit 2.05 @ $185 (T212 ticker YNDX)",
-      "urgency": "now",
-      "reason": "Downgrade from yesterday's 'keep, eyes open': Nebius fell 17%+ on the Meta cloud-competition report and bearish takes are multiplying ('the selloff exposes a deeper problem' — Seeking Alpha). The GPU-scarcity premium underpinning its valuation is exactly what Meta threatens. You already own this theme via CoreWeave with a planned add at 65. Adding a THIRD tranche of AI-infra exposure at $185 with no dated catalyst until August earnings is concentration, not conviction. Watchlist trigger: reclaim of $230."
+      "action": "Halved to 1.2 @ 185 — acknowledged, keep with the reclaim caveat",
+      "urgency": "info",
+      "reason": "You cut the order size in half as recommended (~4.7k CZK reserved). It stays a deep-pullback tranche on the AI-infra theme; the momentum re-entry signal remains a reclaim of $230 (closed 215.62)."
     }
   ],
   "new_plays": [
     {
-      "ticker": "RIVN",
-      "yf_ticker": "RIVN",
-      "name": "Rivian Automotive",
+      "ticker": "LMT",
+      "yf_ticker": "LMT",
+      "name": "Lockheed Martin",
       "type": "swing",
-      "action": "BUY ON PULLBACK",
-      "entry_zone": [17.8, 18.7],
+      "action": "BUY NOW",
+      "entry_zone": [536, 549],
       "tranches": [
-        { "pct": 50, "condition": "first pullback into 18.4-18.7 (do NOT chase above 19)" },
-        { "pct": 50, "condition": "deeper fade to 17.9-18.1 if the gap partially fills" }
+        { "pct": 50, "condition": "at market Monday if within 540-550" },
+        { "pct": 50, "condition": "on a pullback to 532-538 (partial gap fill)" }
       ],
-      "first_sell": { "price": 21.5, "pct": 40 },
-      "second_sell": { "price": 23.5 },
-      "hard_stop": 16.4,
-      "catalyst": "Q2 deliveries beat (12,194) + FY26 guidance RAISED to 65-70k vehicles; Q2 earnings Jul 30 is the timer",
-      "catalyst_date": "2026-07-30",
-      "hold_period": "2-4 weeks",
-      "risk_reward": "from ~18.3 entry: risk -10.4% to stop, +17.5% to first sell (1:1.7), +28% to full exit (1:2.7)",
-      "checklist_score": "4/6 (catalyst, sentiment split, timing, R:R pass; analyst-upside unverified; valuation ~3x sales is cheap vs Tesla but the company is still unprofitable)",
+      "first_sell": { "price": 585, "pct": 40 },
+      "second_sell": { "price": 610 },
+      "hard_stop": 514,
+      "catalyst": "Company RAISED 2026 profit + revenue guidance (Jul 2, stock +4.6%); Q2 earnings ~Jul 21; US defense budget path toward $1.5T by 2027",
+      "catalyst_date": "2026-07-21",
+      "hold_period": "2-6 weeks",
+      "risk_reward": "from ~544: risk -5.5% to stop, +7.5% to first sell, +12% to full exit (~1:2.2 full)",
+      "checklist_score": "5/6 (catalyst dated+company-specific, valuation ~17x reasonable, sentiment recovering from a hated phase, timing fits; analyst-upside moderate)",
       "suggested_size_czk": 9000,
-      "thesis": "Real dated catalyst chain: Q2 deliveries beat expectations, full-year guidance raised on R1/EDV/R2 momentum, stock +13% Thursday on volume with shorts still engaged (fuel). $4.84B cash plus a $1B Volkswagen investment removes near-term survival risk. Framework rule applies: it jumped ~13-15% on the day, so wait for the first pullback — the play is the drift from the delivery beat into Jul 30 earnings. Also the first position in the book outside tech/financials.",
-      "risks": "Deliveries are not profits — the Jul 30 print shows margins and could unwind the pop; EV demand is macro-sensitive; short-seller theses are active. If it never pulls back into the zone, let it go — no chasing."
-    }
-  ],
-  "watchlist": [
-    {
-      "ticker": "MU",
-      "yf_ticker": "MU",
-      "note": "Fell another 7% Thursday (~$897) — approaching the 800-840 re-entry zone faster than expected",
-      "trigger": "800-840 AND stabilization (two green closes / reclaim of 20-day MA). No knife-catching before that."
+      "thesis": "Guidance raises are the cleanest catalyst in the framework — management just told you the year is better than Wall Street modeled, with fighter/missile demand and a structurally rising budget behind it. Thursday's +4.6% on that news led the entire defense complex (SHLD +4.5%). First defense large-cap in the book; pairs with (rather than duplicates) the speculative ONDS.",
+      "risks": "Defense rallies stall on any genuine de-escalation headlines; the gap may fill deeper than 532 in a market pullback — that is what the 50/50 tranche plan is for; earnings Jul 21 confirms or breaks the guidance story."
     },
     {
-      "ticker": "NBIS",
-      "yf_ticker": "NBIS",
-      "note": "Downgraded from order-keep to watchlist — Meta cloud threat hits its core GPU-scarcity premium",
-      "trigger": "Reclaim of $230 on volume, or a signed major non-Meta customer deal"
+      "ticker": "NVO",
+      "yf_ticker": "NVO",
+      "name": "Novo Nordisk (ADR)",
+      "type": "swing",
+      "action": "BUY NOW",
+      "entry_zone": [49, 51.5],
+      "tranches": [
+        { "pct": 60, "condition": "at market (closed 50.43, +3.4% — under the no-chase threshold)" },
+        { "pct": 40, "condition": "on a dip to 48.5-49.5" }
+      ],
+      "first_sell": { "price": 56, "pct": 40 },
+      "second_sell": { "price": 60.5 },
+      "hard_stop": 46.5,
+      "catalyst": "Medicare began covering obesity drugs + UK Wegovy pill approval + Wegovy MASH label expansion; Q2/H1 earnings ~Aug 6",
+      "catalyst_date": "2026-08-06",
+      "hold_period": "3-6 weeks",
+      "risk_reward": "from ~50.4: risk -7.7% to stop, +11% to first sell, +20% to full exit (~1:2.6 full)",
+      "checklist_score": "5/6 (dated catalysts, cheap vs LLY after the 2025 crash, sentiment genuinely split — bears from the CagriSema era vs returning bulls, consensus PT ~57.9 = +15% upside, timing fits)",
+      "suggested_size_czk": 9000,
+      "thesis": "The healthcare rotation's best asymmetry: NVO collapsed from $140+ to $50 through 2025, and now the story is inflecting — Medicare GLP-1 coverage opens the biggest payer in the world, the oral Wegovy pill won UK approval, and the sector is catching rotation money (XLV +2.6%, NVO +3.4% Thursday). First healthcare position; genuinely uncorrelated to everything else in the book.",
+      "risks": "Eli Lilly competition is real and structural; ADR carries DKK/USD noise; if the Aug 6 print shows continued US GLP-1 share loss, exit at the stop without debate."
     },
     {
       "ticker": "AAPL",
       "yf_ticker": "AAPL",
-      "note": "Led the Dow's record day (+4.8%) — rotation winner inside tech; earnings ~Jul 30",
-      "trigger": "First flag/pullback toward the 20-day MA with the rotation intact"
+      "name": "Apple",
+      "type": "earnings",
+      "action": "BUY ON PULLBACK",
+      "entry_zone": [302, 306],
+      "tranches": [
+        { "pct": 50, "condition": "pullback into 303-306 (Balloutt's zone; closed 308.63 after +4.8% — do not chase above 310)" },
+        { "pct": 50, "condition": "deeper fade to 299-302" }
+      ],
+      "first_sell": { "price": 318, "pct": 40 },
+      "second_sell": { "price": 330 },
+      "hard_stop": 294.5,
+      "catalyst": "Siri AI rollout + BofA $380 PT + Q3 FY26 earnings ~Jul 30; led the Dow's record day (+4.8%)",
+      "catalyst_date": "2026-07-30",
+      "hold_period": "2-4 weeks",
+      "risk_reward": "from ~304: risk -3.1% to stop, +4.6% to first sell, +8.6% to full exit (~1:2.7 full)",
+      "checklist_score": "4/6 (catalyst dated, analyst upside +23% to BofA PT, timing and R:R pass; valuation ~30x is a premium; sentiment turning uniform-bullish is the watch-out)",
+      "suggested_size_czk": 7000,
+      "thesis": "The rotation's chosen mega-cap: while chips sold off, AAPL broke out +4.8% leading the Dow to a record. The Siri AI cycle plus the Jul 30 print gives a timer; quality balance sheet removes the survival-risk class of problems entirely. Smallest of the three sizes because the entry needs a pullback that may not come.",
+      "risks": "If it never revisits 306, the play never triggers — that is fine; earnings Jul 30 is binary (size down or take profits before it if unrealized gain exists); a uniform-bullish AAPL consensus is historically fragile."
+    }
+  ],
+  "watchlist": [
+    {
+      "ticker": "BE",
+      "yf_ticker": "BE",
+      "note": "Bloom Energy — AI power demand / fuel cells. Failed its own trigger: needs to HOLD $280 (closed 270.89, -6.4%)",
+      "trigger": "Reclaim and hold 280 -> targets 300-310; alternatively a dip fill at 260-263 with stop 250 (Balloutt levels)"
     },
     {
-      "ticker": "META",
-      "yf_ticker": "META",
-      "note": "The other side of your CRWV risk — its cloud ambitions are what pressures the neoclouds",
-      "trigger": "Pullback toward the 20-day MA; also a natural hedge if AI-infra exposure is kept"
+      "ticker": "INTC",
+      "yf_ticker": "INTC",
+      "note": "Foundry/18A momentum story, but closed 120.35, BELOW the 124 hold level from your priority watch",
+      "trigger": "Reclaim 124-125 on volume -> 140-145; stop would be 115"
     },
     {
-      "ticker": "OUST",
-      "yf_ticker": "OUST",
-      "note": "Ouster (T212 code CLA) — cancelled order stands; still no research on file",
-      "trigger": "Ask for the full 3-step deep dive before any entry"
+      "ticker": "TSLA",
+      "yf_ticker": "TSLA",
+      "note": "Q2 deliveries beat (~480k) but -7.5% Thursday = distribution into good news; 393.45 vs the 395 hold trigger",
+      "trigger": "Hold above 395 for two sessions -> 425-430, stop 380. Below 380, the coiled-spring thesis is dead"
     },
     {
-      "ticker": "XLF",
-      "yf_ticker": "XLF",
-      "note": "Financials basket through earnings season if JPM works",
-      "trigger": "JPM/BAC beats on Jul 14 with the rotation holding"
+      "ticker": "ASTS",
+      "yf_ticker": "ASTS",
+      "note": "45 satellites, revenue inflection; 85.13 — just under your 86 trigger",
+      "trigger": "Break and hold above 86 -> 100-110, stop 82"
+    },
+    {
+      "ticker": "NOK",
+      "yf_ticker": "NOK",
+      "note": "JPMorgan $21 PT vs 12.07 close (-6.5% Thursday); AI networking partnerships; very cheap but no dated near catalyst on file",
+      "trigger": "Above 12.50 with the tape -> 14-14.5; earnings late July would add the timer"
+    },
+    {
+      "ticker": "ADBE",
+      "yf_ticker": "ADBE",
+      "note": "HSBC upgrade, AI revenue tripling narrative; +4.1% Thursday to 219.7 — Balloutt's dip zone 195-205 was missed",
+      "trigger": "Dip to 205-210 or a breakout hold above 225"
+    },
+    {
+      "ticker": "MU",
+      "yf_ticker": "MU",
+      "note": "CORRECTION from yesterday: closed ~975, NOT near the 800-840 re-entry zone — the -7% headline day was already in the price",
+      "trigger": "Unchanged: 800-840 AND stabilization, OR reclaim of the 20-day MA (~1050) turns it into a momentum re-entry"
+    },
+    {
+      "ticker": "PLTR",
+      "yf_ticker": "PLTR",
+      "note": "AIP growth, Rule-of-40 at 145%; closed 129.3 — already ABOVE Balloutt's 115-118 entry zone",
+      "trigger": "Pullback to 118-122; chasing at 129 breaks the R:R"
+    },
+    {
+      "ticker": "CBRS",
+      "yf_ticker": "CBRS",
+      "note": "AI chip name from Balloutt's list, closed 204.86 (-7.4%). VERIFY it exists on Trading212 before any order",
+      "trigger": "Dip zone 180-185 -> 210-220 per the source list; needs a proper 3-step deep dive first"
+    },
+    {
+      "ticker": "SMR",
+      "yf_ticker": "SMR",
+      "note": "Nuclear/AI-power complex (with BWXT, GEV, URA, XLU from your energy list) — the non-chip way to own AI demand",
+      "trigger": "Ask for a sector deep dive when you want to add the energy leg; XLU +2.2% Thursday says rotation money is already sniffing"
+    },
+    {
+      "ticker": "STM",
+      "yf_ticker": "STM",
+      "note": "YOUR OPTION FLAG: STM closed 68.35 (-3.4%); your Oct 16 $100 call is ~46% out of the money — that premium is at high risk of expiring worthless",
+      "trigger": "Spot STM only interesting on a reclaim of the 200-day; the option is a separate (non-T212) decision — consider salvage value"
+    },
+    {
+      "ticker": "EUV",
+      "yf_ticker": "EUV",
+      "note": "YOUR OPTION FLAG: EUV closed 26.25 (-10.9%); a Dec $40 call is ~52% OTM — 'might buy more' means averaging into deep OTM premium, which the framework would veto",
+      "trigger": "No spot setup; unresearched name — ask for a deep dive before adding ANY exposure"
     }
   ]
 }
