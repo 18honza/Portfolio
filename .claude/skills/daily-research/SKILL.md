@@ -42,7 +42,10 @@ the user places every order manually. Hold window: days to a few months
    flags** become `new_plays`, each with a full Step 4 setup: entry zone, tranche
    plan (partial entries), first/second sell levels with %, hard stop, R:R math,
    hold period, catalyst + date, and a suggested position size in CZK
-   (max ~15–20% of the account per position, less for earnings plays).
+   (hard cap 40% of the account per position — user's setting, 2026-07-07;
+   size meaningfully smaller for earnings/binary-event plays, and flag in the
+   reason whenever a single name exceeds ~25% so concentration stays a
+   conscious choice).
 
 6. **Write output**:
    - `research/plays.json` following the schema in `CLAUDE.md` (set `as_of` to

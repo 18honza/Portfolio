@@ -70,7 +70,9 @@ plans: `hard_stop`, `sell1`, `sell1_pct`, `sell2`, `catalyst`, `catalyst_date`,
 - After every research update: commit and push (`research: YYYY-MM-DD daily update`).
 - Code changes: normal commits, push to `main` on https://github.com/18honza/Portfolio.git.
 - New play candidates must be tradable on Trading212 (any market is fine).
-- Position sizes are suggested in CZK; never exceed ~20% of account per name.
+- Position sizes are suggested in CZK; hard cap 40% of account per name
+  (user's setting, 2026-07-07). Earnings/binary-event plays still size smaller
+  per the framework's size-down rule.
 - Never automate order placement anywhere in this project.
 - Posture: user wants ~85–90% invested by default (small cash buffer for new
   plays); defensive cash only during active risk-off tapes, and every exit or

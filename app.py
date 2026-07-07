@@ -554,7 +554,7 @@ with tab_opt:
     extra = st.text_input("Extra tickers (comma-separated Yahoo symbols)", "")
     universe = sorted(set(default_universe) | {t.strip().upper() for t in extra.split(",") if t.strip()})
     universe = st.multiselect("Universe", universe, default=universe)
-    max_w = st.slider("Max weight per asset (%)", 5, 100, 30, 5) / 100
+    max_w = st.slider("Max weight per asset (%)", 5, 100, 40, 5) / 100
 
     if len(universe) < 2:
         st.info("Pick at least 2 assets (holdings + watchlist are preselected once they exist).")
