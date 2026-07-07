@@ -46,3 +46,35 @@ SPCX 155–157→180 s155 · ONDS dip 7.25–8→16 s6.50 · CRWV 100–102→11
   250**. Converges with our plan (stop 171, sell1 190); his 250 is a
   LEAP-horizon target beyond our swing window — argues for keeping a ~20%
   runner past the second sell instead of a full exit.
+
+### "Dizu Alerts" — bought 2026-07-06 (a second, more aggressive source)
+
+A barbell: one 3x-levered semis bet + four binary clinical biotechs. High
+conviction, high variance. **Verify T212 availability before any of these** —
+levered ETFs and small US biotechs are often restricted for EU retail.
+
+- **SOXL** — Direxion Daily Semiconductor **Bull 3x** ETF, bought $198.88,
+  now **28.8% of his book**. Thesis: "semis still the most bullish sector."
+  *Our read:* correct direction (we're long the chip bounce via QCOM), but 3x
+  daily-reset leverage + 29% concentration is far outside our framework —
+  decay + gap risk make it un-stoppable in our style. We express the same view
+  through QCOM/SOXX unlevered. **Do not replicate the leverage.**
+- **VRDN** (Viridian) $19.33 → now ~19: **catalyst already fired** —
+  veligrotug (Lumvoa) FDA-approved Jun 30 2026. This is a *post*-approval
+  commercial-launch bet, not a pre-catalyst run; -5% and near 52w low means the
+  approval was a "sell-the-news." Only interesting on a launch-traction thesis,
+  not the binary.
+- **MLYS** (Mineralys) $29.08: lorundrostat (hypertension) PDUFA **Dec 22
+  2026** — real catalyst but ~5 months out, outside our 2-8 week window. A
+  pre-PDUFA drift play only closer to the date; +7% the day he bought.
+- **COGT** (Cogent) $39.23: bezuclastinib APEX (systemic mastocytosis) data
+  the live catalyst; $6.7B cap, most de-risked of the four.
+- **VIR** (Vir Bio) $9.99: tobevibart/elebsiran for chronic hepatitis delta;
+  near 52w low, deep-value binary.
+
+*Verdict:* his biotechs are pure event-driven bets scored by FDA/data dates,
+not by the momentum+valuation framework we run. They don't fit our system and
+shouldn't be copied wholesale. The one transferable idea is a **pre-PDUFA drift
+play** — if we want biotech exposure, MLYS into its Dec 22 date (entered ~4-6
+weeks prior with a hard stop) is the only one that maps to our method. Tracked
+as watchlist, not plays.

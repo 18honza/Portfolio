@@ -1,7 +1,7 @@
 {
   "as_of": "2026-07-07",
-  "generated_by": "claude daily-research 2026-07-07",
-  "market_context": "Bounce confirmed and extended: SPY 751 (above the 742 health line), VIX 15.9, chips resumed their surge Monday and small caps just had their best H1 since 1991. Tape is risk-on. The week is catalyst-dense: FOMC minutes Wed Jul 8, jobless claims Thu, then the double-header Tue Jul 14 — June CPI (May ran hot at 4.2% YoY) AND big-bank earnings (JPM held). FOMC decision Jul 28-29 lands the same week QCOM/RIVN/AAPL report. Account is ~86% invested per the posture target; with only ~1.4k CZK free, this run manages winners into strength — sells fund the next buys. NOTE: friend's new positions (photos) did not come through — send tickers to fold them in.",
+  "generated_by": "claude daily-research 2026-07-07 (friend's Dizu positions integrated)",
+  "market_context": "Bounce confirmed and extended: SPY 751 (above the 742 health line), VIX 15.9, chips resumed their surge Monday and small caps just had their best H1 since 1991. Tape is risk-on. The week is catalyst-dense: FOMC minutes Wed Jul 8, jobless claims Thu, then the double-header Tue Jul 14 — June CPI (May ran hot at 4.2% YoY) AND big-bank earnings (JPM held). FOMC decision Jul 28-29 lands the same week QCOM/RIVN/AAPL report. Account is ~86% invested per the posture target; with only ~1.4k CZK free, this run manages winners into strength — sells fund the next buys. Friend 'Dizu' bought a barbell Jul 6: SOXL (3x semis, 29% of his book) + four binary biotechs (VRDN/MLYS/COGT/VIR) — assessed on the watchlist; his biotechs are event-driven bets that don't map to our momentum framework, and SOXL's 3x leverage is outside our risk rules (we're long the same chip view via QCOM). Not copied.",
   "position_actions": [
     {
       "ticker": "AAPL",
@@ -142,6 +142,30 @@
       "yf_ticker": "STM",
       "note": "Health check on your external options: STM 71.4 — the Oct $100 call remains ~40% OTM; theta is winning. The Dec $40 EUV call needs EUV +100%+",
       "trigger": "Framework verdict unchanged: no averaging into decaying OTM premium"
+    },
+    {
+      "ticker": "MLYS",
+      "yf_ticker": "MLYS",
+      "note": "Friend Dizu bought at 29.08. Lorundrostat (hypertension) FDA PDUFA Dec 22 2026 — the only one of his biotechs that maps to our method as a pre-PDUFA drift play",
+      "trigger": "Enter ~4-6 weeks before Dec 22 (i.e. early Nov) on a clean setup with a hard stop; too early now"
+    },
+    {
+      "ticker": "COGT",
+      "yf_ticker": "COGT",
+      "note": "Friend Dizu bought at 39.23. Cogent — bezuclastinib APEX data (systemic mastocytosis); $6.7B cap, most de-risked of his four biotechs. Verify T212 availability",
+      "trigger": "A dated data readout inside our 2-8 week window; not present yet"
+    },
+    {
+      "ticker": "VRDN",
+      "yf_ticker": "VRDN",
+      "note": "Friend Dizu bought at 19.33. Viridian — veligrotug (Lumvoa) ALREADY FDA-approved Jun 30; this is now a commercial-launch bet, near 52w low after a sell-the-news",
+      "trigger": "Launch-traction evidence (script data) — not a pre-catalyst setup anymore"
+    },
+    {
+      "ticker": "SOXL",
+      "yf_ticker": "SOXL",
+      "note": "Friend Dizu's biggest bet (29% via 3x-levered semis). We share the bullish chip view but express it unlevered via QCOM — 3x daily-reset decay + gap risk is outside our framework",
+      "trigger": "N/A — do not replicate the leverage; use QCOM/SOXX unlevered for chip exposure"
     }
   ]
 }
