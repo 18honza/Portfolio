@@ -22,6 +22,16 @@ the user places every order manually. Hold window: days to a few months
    macro events (FOMC, CPI, jobs), and the earnings calendar for the next 2–4 weeks
    covering held names and watchlist names.
 
+2b. **Breaking-news check (EVERY run — user's standing request, 2026-07-08)**:
+   search for geopolitical and macro shocks from the last 24-48h (military
+   strikes, sanctions, wars, surprise policy moves — e.g. the 2026-07-07 US-Iran
+   strikes that stopped out two positions) plus oil, 10Y yields and VIX. For
+   each holding, state its exposure to the shock. Decide explicitly whether the
+   posture rule's "active risk-off" condition applies (SPY breaking support +
+   VIX > ~22 = yes; a contained scare = no). Check whether the "obvious" trade
+   (defense/oil on war news) actually confirmed in prices before recommending
+   it — day-late chases of geopolitical headlines are forbidden.
+
 3. **Held positions — sell discipline**: for each position, apply the sell-signal
    table and red-flag list from the framework (stop breached, sell levels hit,
    catalyst priced in, guidance disappointment, insider selling, 3+ weeks idle,
