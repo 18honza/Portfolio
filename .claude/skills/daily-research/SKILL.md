@@ -79,6 +79,16 @@ the user places every order manually. Hold window: days to a few months
   risk-off** (broad selling, breaking supports). State explicitly in the
   market context when that condition starts AND when it ends.
 
+## Long-hold designation (user policy, 2026-07-09)
+
+Not every position is a 2-60 day trade. When research supports a multi-quarter
+"bright future" thesis (secular growth story, structural design wins, dominant
+niche), a position may be tagged `type: "long"`: wider stop, no idle-timer or
+2-month clock, weekly instead of daily scrutiny, and partial profit-taking with
+a permanent runner instead of full exits. Long positions still REQUIRE a hard
+stop and explicit thesis-break conditions — "long-term" is a thesis horizon,
+never an excuse to hold through a broken thesis.
+
 ## Hard rules
 
 - Never place, simulate, or queue orders. Text recommendations only.

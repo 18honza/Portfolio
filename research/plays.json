@@ -1,100 +1,141 @@
 {
-  "as_of": "2026-07-08",
-  "generated_by": "claude daily-research 2026-07-08 (news-aware run)",
-  "market_context": "GEOPOLITICAL SHOCK, CONTAINED: the US struck 80+ Iranian sites Jul 7 and revoked Iran's oil-sale waiver — Brent +3.3% to ~$76.5, 10Y yields at 4.56% after SEVEN straight up-days, VIX +14% to 18.4. But SPY held the 742 line (747.7, +0.2%) and the 'obvious' war trades did NOT confirm (XLE -0.6%, SHLD flat) — so per the posture rule this is a contained scare, NOT active risk-off. The yield squeeze, not the strikes, is what broke the high-beta names: RIVN and HLIT stopped out (-1,940 CZK realized combined; both stops did their job). The NBIS 185 dip-limit filled on the flush — a planned buy executing at the planned price. Account ~70% invested + NVO tranche-2 zone live; CPI Tue Jul 14 gates the rest of the redeployment.",
+  "as_of": "2026-07-09",
+  "generated_by": "claude daily-research 2026-07-09 (TPs processed; long-hold policy active)",
+  "market_context": "Calm tape ahead of the Jul 14 CPI + bank-earnings double-header: VIX 16.8, SPY 745 (above the 742 line), oil fading to $73.7 as the Iran premium bleeds off — but the 10Y at 4.57% keeps pressure on high-multiple names. The book banked profits into strength: QCOM's 190 TP filled on an overnight spike, the NBIS 185 dip-buy was trimmed at 201 and 225 (+22% in two days), and the NVO tranche-2 add executed at 48.47. Realized +1,086 CZK since yesterday. Now 64% invested with 25.1k free — this run redeploys ~15.5k into two researched names from the friend's book (LITE, ADSK) under the new long-hold policy, and keeps ~10k CPI-gated until Tuesday.",
   "position_actions": [
     {
-      "ticker": "NVO",
-      "action": "EXECUTE tranche 2 — buy ~3,400 CZK in the 48.5-49.5 zone (now 48.54)",
-      "urgency": "now",
-      "reason": "The pre-planned 40% second tranche zone is live. No company-specific news — NVO fell with yields and the tape, which is exactly the dip the tranche was designed for. Planned in advance = framework-legal add. Stop stays 46.5 (-4.2% from here); catalysts unchanged (Medicare GLP-1 coverage, oral Wegovy, earnings Aug 6)."
-    },
-    {
-      "ticker": "YNDX",
-      "action": "NBIS filled at 185 — set the plan: stop 174, sells 205 (40%) / 225",
-      "urgency": "now",
-      "reason": "Your dip-limit executed on the Iran/yields flush (now 186.98, +45 CZK). Place the stop at 174 promptly — a filled position without a live stop order is the one state the framework never allows. Combined AI-infra exposure with CRWV is ~10% of account — fine. The 230 reclaim remains the momentum-confirmation level."
-    },
-    {
-      "ticker": "ONDS",
-      "action": "HOLD — but it is 5.6% above the stop; if 6.85 fires, re-entry is a 7.70 reclaim",
-      "urgency": "level",
-      "reason": "7.26 (-461 CZK), the book's weakest. The Iran strikes did NOT lift defense (SHLD flat) — no rescue bid coming from headlines. Cyberhawk Q3 close is still the catalyst, the stop is still the risk manager. Pre-committed re-entry per posture rule: reclaim of 7.70 with two consecutive green closes."
-    },
-    {
-      "ticker": "JPM",
-      "action": "Trim limit 0.6 @ 345 is live — if unfilled by Friday's close, trim half at market",
-      "urgency": "level",
-      "reason": "335.56 (+66 CZK). Six days to the Jul 14 double binary (Q2 earnings + June CPI, with yields already rising seven days straight). The framework's size-down rule has a deadline: Friday Jul 11 close. Stop 319.5 covers the rest."
-    },
-    {
-      "ticker": "AAPL",
-      "action": "HOLD — sell limit 0.42 @ 318 live, exactly per plan",
-      "urgency": "info",
-      "reason": "309.44 (+106 CZK), weathered the shock well. After 318 prints, raise the stop on the remainder to 302 (entry lock). Earnings Jul 30."
-    },
-    {
       "ticker": "QCOM",
-      "action": "HOLD — the fortress position; sell1 190 unchanged",
-      "urgency": "info",
-      "reason": "180.13 (+421 CZK), barely dented by the shock — the value-semi thesis keeps absorbing hits (MU +2.6% today too; the chip bounce resumed even through Iran headlines). Stop 171 live, 40% off at 190, runner plan above 205. Earnings Jul 29."
-    },
-    {
-      "ticker": "LMT",
-      "action": "HOLD — do NOT add on war headlines; tranche 2 only at 532-538",
-      "urgency": "info",
-      "reason": "540.09 (-43 CZK). Counter-intuitive but honest: defense barely moved on the strikes — the war premium is already priced. Chasing LMT on Iran news a day late has no edge; the Jul 21 earnings print (guidance already raised) is the real catalyst. The pre-planned 532-538 tranche zone stands."
+      "action": "RAISE STOP to 179 (from 172); sell2 205 with a 20% runner stays",
+      "urgency": "now",
+      "reason": "TP1 executed: 1.2 shares sold at exactly 190 on the overnight spike — textbook. The remaining 1.74 shares (+740 CZK) now trade at ~187 after the morning fade; raising the stop to 179 (under the 180 shelf) locks a profitable trade outcome no matter what. Next: sell ~40% of the remainder at 205, keep the runner for the friend-converged 250 scenario. Earnings Jul 29."
     },
     {
       "ticker": "CRWV",
-      "action": "HOLD — the 85 breakout was rejected; trigger resets, stops unchanged",
-      "urgency": "info",
-      "reason": "81.02 (-50 CZK). Monday's touch of 85 failed on the shock — a rejected breakout is information, not a sell signal; the stop at 61.5 and the 65 tranche (3.5k reserved) manage the risk. New confirmation: daily close above 85."
+      "action": "RAISE STOP to 75 (from 61.5); sell 40% at 100 approaches",
+      "urgency": "now",
+      "reason": "90-93 (+549 CZK), the 85 breakout finally confirmed and the first sell at 100 is within reach. The original stop at 61.5 now risks giving back the entire move — raising to 75 (below the July consolidation shelf) converts this into a can't-lose-much swing while keeping the 100/118 targets alive. The 65 buy-tranche (3.5k reserved) can stay as crash insurance or be cancelled to fund the LITE play — your call, both defensible."
     },
     {
-      "ticker": "RIVN",
-      "action": "STOPPED OUT at 16.40 (-1,109 CZK) — re-entry trigger defined, no revenge trade",
-      "urgency": "info",
-      "reason": "The stop did its job: -12% instead of riding a yield-squeeze lower (now 16.49). The delivery-beat thesis wasn't wrong, the timing was. Re-entry per posture rule: daily close back above 17.80 (the old entry-zone floor) before Jul 25, else wait for the Jul 30 earnings reaction and re-run the framework on the print."
+      "ticker": "JPM",
+      "action": "TRIM 0.6 at market TOMORROW (Fri Jul 10) — deadline corrected, 345 won't come in time",
+      "urgency": "now",
+      "reason": "330.99 (-65 CZK) with the 345 trim limit far away. Correction from earlier runs: the trim deadline is Friday JUL 10 (Jul 11 is a Saturday). Tuesday brings earnings + CPI on the same morning with yields elevated — the size-down rule says: half off at market Friday, hold 0.6 through the print with the 319.5 stop."
     },
     {
-      "ticker": "HLIT",
-      "action": "STOPPED OUT at 12.83 (-870 CZK) — re-entry only on a 14.00 reclaim before Jul 24",
+      "ticker": "LMT",
+      "action": "DO NOT add — the 532-538 tranche zone broke; wait for Jul 21 earnings",
+      "urgency": "level",
+      "reason": "527.96 (-281 CZK), below the pre-planned add zone. A tranche zone that price falls THROUGH is invalidated, not discounted — adding below it is averaging down, which the framework forbids without a new thesis. The raised-guidance story gets tested at earnings Jul 21; the 514 stop (2.6% below) is the risk manager until then. If stopped: re-entry only on a post-earnings reclaim of 540."
+    },
+    {
+      "ticker": "NVO",
+      "action": "HOLD — tranche 2 done at 48.47, full position now 11.3 shares",
       "urgency": "info",
-      "reason": "The pre-earnings drift never came and the stop fired through the 12.90 level on the gap (now 13.43). The idle-rule deadline (Jul 20) was already looming — the market just enforced it early. Re-entry: reclaim of 14.00 on volume before Jul 24 revives the drift play into the Jul 27 print; otherwise skip the binary entirely."
+      "reason": "48.81 vs blended avg 49.84 (-234 CZK). The planned add executed exactly in the zone. Thesis (Medicare GLP-1 + oral Wegovy) unchanged, catalyst Aug 6, stop 46.5 on the full 11.3 shares. Under the long-hold policy this is a candidate for 'long' designation after the Aug 6 print confirms."
+    },
+    {
+      "ticker": "AAPL",
+      "action": "HOLD — 318 sell limit working, 312.45 (+161 CZK)",
+      "urgency": "info",
+      "reason": "Recovering per plan; after 318 prints raise the remainder stop to 302. Earnings Jul 30."
+    },
+    {
+      "ticker": "ONDS",
+      "action": "HOLD — back to breakeven, stop 6.85 untouched",
+      "urgency": "info",
+      "reason": "7.67 (-23 CZK) after the scare — the stop survived, the Cyberhawk Q3 catalyst is intact. Friend's book holds it from 8.00 at 15% conviction. First sell 9.80 unchanged."
+    },
+    {
+      "ticker": "YNDX",
+      "action": "NBIS: keep the 0.1-share runner, stop 205",
+      "urgency": "info",
+      "reason": "The dip-buy round-trip is closed (+~260 CZK realized on the trims at 201/225); the 0.1 leftover (~480 CZK) rides as a house-money runner at 227. Stop 205; if the AI-infra leg extends toward the 300 highs, it pays for the coffee this trade earned."
     }
   ],
-  "new_plays": [],
+  "new_plays": [
+    {
+      "ticker": "LITE",
+      "yf_ticker": "LITE",
+      "name": "Lumentum Holdings",
+      "type": "long",
+      "action": "BUY NOW",
+      "entry_zone": [695, 715],
+      "tranches": [
+        { "pct": 60, "condition": "at market (~707) — the 700 shelf has held for two weeks" },
+        { "pct": 40, "condition": "on a flush to 670-690 if the shelf breaks and reclaims" }
+      ],
+      "first_sell": { "price": 800, "pct": 30 },
+      "second_sell": { "price": 880 },
+      "hard_stop": 665,
+      "catalyst": "FQ4 earnings ~mid-Aug guiding +105% YoY revenue; $2B Nvidia partnership funding AI-optics capacity; CPO transition leadership",
+      "catalyst_date": "2026-08-12",
+      "hold_period": "long-hold designation — multi-quarter thesis, weekly review",
+      "risk_reward": "from ~707: risk -5.9% to stop, +13% to first sell, +24% to second (~1:2.2 / 1:4); runner kept beyond",
+      "checklist_score": "5/6 (dated catalyst, sentiment perfectly split — dueling bull/bear titles the same week, Buy consensus, timing, R:R pass; valuation 46x fwd is the premium-but-justified judgment call given +105% growth)",
+      "suggested_size_czk": 10000,
+      "thesis": "The first position bought under your long-hold policy: Lumentum is the AI-optics arms dealer — record Q3 (revenue $808M), Q4 guided to DOUBLE year-over-year, and a $2B Nvidia partnership funding manufacturing expansion in North Carolina and Japan. The stock corrected 33% from its May peak purely on valuation unwind (80x -> 46x forward) while estimates went UP. Friend's book holds it from 280 at 15% — his largest conviction. The 700 shelf gives a defined-risk entry into a secular story.",
+      "risks": "46x forward is still expensive — a market-wide multiple compression hits LITE 2x as hard (beta); optics competition (Coherent, InP capacity); if the Aug print guides below +90% YoY the premium deflates fast. The 665 stop = the thesis-break line (700 shelf failure)."
+    },
+    {
+      "ticker": "ADSK",
+      "yf_ticker": "ADSK",
+      "name": "Autodesk",
+      "type": "long",
+      "action": "BUY ON PULLBACK",
+      "entry_zone": [198, 208],
+      "tranches": [
+        { "pct": 50, "condition": "at market (~206) — basing 11% above the June low" },
+        { "pct": 50, "condition": "on a retest of 195-200 holding" }
+      ],
+      "first_sell": { "price": 240, "pct": 40 },
+      "second_sell": { "price": 258 },
+      "hard_stop": 183,
+      "catalyst": "Q2 FY27 earnings ~Aug 27; MaintainX ($3.6B, largest-ever deal) integration; AWS collaboration",
+      "catalyst_date": "2026-08-27",
+      "hold_period": "long-hold designation — the AI-fear discount unwinding over quarters",
+      "risk_reward": "from ~206: risk -11% to stop, +16.5% to first sell, +25% to second (~1:1.5 / 1:2.3)",
+      "checklist_score": "4/6 (valuation compressed, sentiment split, analyst upside +41% to UBS's 290; timing is at the window's edge and the stock is below its 200-day — the two honest weaknesses)",
+      "suggested_size_czk": 5500,
+      "thesis": "The 'AI kills design software' trade compressed ADSK 34% YTD to near its 52-week low — while actual results went the other way: Q1 revenue AND billings +18.4%, both beats, plus the MaintainX acquisition and AWS AI collaboration. Same setup that made ADBE a community pick. Friend holds from 190 at 5% — small size, and ours matches: below the 200-day means this is early, so it gets the smallest slot in the book.",
+      "risks": "Catching a downtrend early — the 183 stop (under the June 52w low) is non-negotiable; AI-disruption fear can compress multiples further regardless of results; earnings 7 weeks out means no near catalyst if momentum stalls."
+    }
+  ],
   "watchlist": [
     {
       "ticker": "CPI-GATE",
       "yf_ticker": "SPY",
-      "note": "~15k CZK stays in reserve until June CPI (Tue Jul 14, 14:30 Prague). Yields up 7 straight days + hot May print (4.2%) = the one number that decides the next leg",
-      "trigger": "CPI cool + SPY holds 742 -> redeploy into the strongest trigger below. CPI hot -> stops are live, do nothing, reassess Wednesday"
+      "note": "~10k CZK stays gated until June CPI (Tue Jul 14, 14:30 Prague). After LITE+ADSK deploy, the book runs ~81% invested + 3.5k reserved",
+      "trigger": "Cool CPI + SPY > 742 -> deploy the rest into the strongest open trigger. Hot CPI -> stops live, reassess Wednesday"
+    },
+    {
+      "ticker": "RIVN",
+      "yf_ticker": "RIVN",
+      "note": "Stopped at 16.40; re-entry trigger unchanged",
+      "trigger": "Daily close > 17.80 before Jul 25, else re-run the framework on the Jul 30 earnings reaction"
+    },
+    {
+      "ticker": "HLIT",
+      "yf_ticker": "HLIT",
+      "note": "Stopped at 12.83; drift window closing",
+      "trigger": "Reclaim 14.00 on volume before Jul 24 revives the earnings-drift play; otherwise skip the Jul 27 binary"
     },
     {
       "ticker": "INTC",
       "yf_ticker": "INTC",
-      "note": "Fell to 110 — the 124 reclaim trigger is now ~12% away; the dip-zone entry (120-125) broke. Play dormant, NOT dead — earnings Jul 23",
-      "trigger": "Only a daily close back above 124 revives it; below that there is no setup, just a falling knife"
-    },
-    {
-      "ticker": "ASTS",
-      "yf_ticker": "ASTS",
-      "note": "74.2 — trigger (86) now 16% away; dormant",
-      "trigger": "Daily close above 86; nothing before"
+      "note": "~110 — dormant; earnings Jul 23",
+      "trigger": "Only a daily close above 124; nothing before"
     },
     {
       "ticker": "MLYS",
       "yf_ticker": "MLYS",
-      "note": "Friend Dizu's pick; lorundrostat PDUFA Dec 22 — the pre-PDUFA drift entry window opens ~early November",
-      "trigger": "Early Nov, clean technical setup, hard stop mandatory"
+      "note": "Friend Dizu's pick; lorundrostat PDUFA Dec 22",
+      "trigger": "Pre-PDUFA drift entry window opens ~early November"
     },
     {
-      "ticker": "XLE-defense-check",
-      "yf_ticker": "XLE",
-      "note": "Honesty log: the Iran 'obvious trades' did not confirm (XLE -0.6%, SHLD flat on strike day) — day-late geopolitical chases stay forbidden",
-      "trigger": "Only a multi-day confirmed trend in energy/defense with a dated catalyst would qualify"
+      "ticker": "LITE-friend",
+      "yf_ticker": "LITE",
+      "note": "Friend's largest conviction (15% from 280, now ~2.5x). His other holds: ONDS from 8 (15%, we own it), ADSK from 190 (5%, now our play too). Options <0.5% — negligible",
+      "trigger": "Tracked via our LITE and ADSK plays above"
     }
   ]
 }
