@@ -1,141 +1,106 @@
 {
-  "as_of": "2026-07-09",
-  "generated_by": "claude daily-research 2026-07-09 (TPs processed; long-hold policy active)",
-  "market_context": "Calm tape ahead of the Jul 14 CPI + bank-earnings double-header: VIX 16.8, SPY 745 (above the 742 line), oil fading to $73.7 as the Iran premium bleeds off — but the 10Y at 4.57% keeps pressure on high-multiple names. The book banked profits into strength: QCOM's 190 TP filled on an overnight spike, the NBIS 185 dip-buy was trimmed at 201 and 225 (+22% in two days), and the NVO tranche-2 add executed at 48.47. Realized +1,086 CZK since yesterday. Now 64% invested with 25.1k free — this run redeploys ~15.5k into two researched names from the friend's book (LITE, ADSK) under the new long-hold policy, and keeps ~10k CPI-gated until Tuesday.",
+  "as_of": "2026-07-10",
+  "generated_by": "claude daily-research 2026-07-10 (SKHY listing-day special)",
+  "market_context": "Calm tape into Tuesday's CPI + bank-earnings double-header: VIX 16, SPY 751.7 holding, no new Iran escalation. The event of the day is the SK Hynix Nasdaq ADR listing (SKHY) — the largest ADR listing in history (~$26.5-29B, surpassing Alibaba 2014). Critical fact the hype ignores: this is NOT a price-discovery IPO — SK Hynix trades live in Seoul, and ADR parity computes to ~$144.86 vs a $149 issue price and a ~$205 pre-market indication. Anyone buying the open pays ~+40% over the same share in Korea, and arbitrage desks exist to close exactly that gap. JPM trim executed at 335.50 per plan; ADSK filled 206.84 with stop live; LITE ran to ~786 without filling the 715 limit — not chased.",
   "position_actions": [
     {
-      "ticker": "QCOM",
-      "action": "RAISE STOP to 179 (from 172); sell2 205 with a 20% runner stays",
+      "ticker": "SKHY",
+      "action": "RESTRUCTURE the listing play: cancel or cap the market order; move the 165 limit to 152-155 with a 147 stop; keep the 2-day timer",
       "urgency": "now",
-      "reason": "TP1 executed: 1.2 shares sold at exactly 190 on the overnight spike — textbook. The remaining 1.74 shares (+740 CZK) now trade at ~187 after the morning fade; raising the stop to 179 (under the 180 shelf) locks a profitable trade outcome no matter what. Next: sell ~40% of the remainder at 205, keep the runner for the friend-converged 250 scenario. Earnings Jul 29."
+      "reason": "The good parts of your plan: the 2-day time stop and the +10/+20/+30 trim ladder — keep both. The three flaws: (1) this is a cross-listing with a live Seoul anchor at ~$144.86 parity — the 'IPO pump' pattern belongs to price-discovery IPOs, and here every percent above parity is a mechanical arbitrage short; (2) the pop ALREADY happened — issue $149 -> indication ~$205 went to bookbuild allocants; a market order at the open buys their exit, not the pump; (3) inverted sizing — your 3k participates if it works, your 7k fills only if the trade is already failing through 165 (still +14% over parity, with air down to 149/145). If you keep any of it: market tranche max 3k with a hard -8% stop from fill; limit tranche at 152-155 (just above issue/parity where real support lives) with stop 147 — below the issue price the allocants are underwater and selling cascades. Friend's 'if you buy at the prices, you should be profitting' is not a stop — it is a hope."
+    },
+    {
+      "ticker": "QCOM",
+      "action": "PLACE STOP 179 on the ~1.0 unreserved shares — position is currently stopless",
+      "urgency": "now",
+      "reason": "The 205 sell limit (0.75 sh) reserved part of the position and the old stop got cancelled in the process — T212 will not let two sell orders cover the same shares. Result: 1.74 shares, +569 CZK, zero stop orders. Fix: stop 179 on the ~1.0 shares not reserved by the 205 limit. Same T212 mechanic bit CRWV and AAPL — see below."
     },
     {
       "ticker": "CRWV",
-      "action": "RAISE STOP to 75 (from 61.5); sell 40% at 100 approaches",
+      "action": "PLACE STOP 75 on the 1.39 unreserved shares",
       "urgency": "now",
-      "reason": "90-93 (+549 CZK), the 85 breakout finally confirmed and the first sell at 100 is within reach. The original stop at 61.5 now risks giving back the entire move — raising to 75 (below the July consolidation shelf) converts this into a can't-lose-much swing while keeping the 100/118 targets alive. The 65 buy-tranche (3.5k reserved) can stay as crash insurance or be cancelled to fund the LITE play — your call, both defensible."
-    },
-    {
-      "ticker": "JPM",
-      "action": "TRIM 0.6 at market TOMORROW (Fri Jul 10) — deadline corrected, 345 won't come in time",
-      "urgency": "now",
-      "reason": "330.99 (-65 CZK) with the 345 trim limit far away. Correction from earlier runs: the trim deadline is Friday JUL 10 (Jul 11 is a Saturday). Tuesday brings earnings + CPI on the same morning with yields elevated — the size-down rule says: half off at market Friday, hold 0.6 through the print with the 319.5 stop."
-    },
-    {
-      "ticker": "LMT",
-      "action": "DO NOT add — the 532-538 tranche zone broke; wait for Jul 21 earnings",
-      "urgency": "level",
-      "reason": "527.96 (-281 CZK), below the pre-planned add zone. A tranche zone that price falls THROUGH is invalidated, not discounted — adding below it is averaging down, which the framework forbids without a new thesis. The raised-guidance story gets tested at earnings Jul 21; the 514 stop (2.6% below) is the risk manager until then. If stopped: re-entry only on a post-earnings reclaim of 540."
-    },
-    {
-      "ticker": "NVO",
-      "action": "HOLD — tranche 2 done at 48.47, full position now 11.3 shares",
-      "urgency": "info",
-      "reason": "48.81 vs blended avg 49.84 (-234 CZK). The planned add executed exactly in the zone. Thesis (Medicare GLP-1 + oral Wegovy) unchanged, catalyst Aug 6, stop 46.5 on the full 11.3 shares. Under the long-hold policy this is a candidate for 'long' designation after the Aug 6 print confirms."
+      "reason": "89.91 (+376 CZK), the 100-target sell (0.9 sh) is working but the stop vanished with the same share-reservation mechanic. 1.39 shares are unprotected into a tape with CPI four days out. Stop 75, per Wednesday's raise."
     },
     {
       "ticker": "AAPL",
-      "action": "HOLD — 318 sell limit working, 312.45 (+161 CZK)",
-      "urgency": "info",
-      "reason": "Recovering per plan; after 318 prints raise the remainder stop to 302. Earnings Jul 30."
+      "action": "PLACE STOP 294.5 on the 0.63 unreserved shares",
+      "urgency": "now",
+      "reason": "314.43 (+207 CZK), the 318 limit (0.42 sh) is close to printing. The other 0.63 shares carry no stop. After 318 fills, raise the remainder stop to 302. Earnings Jul 30."
     },
-    {
-      "ticker": "ONDS",
-      "action": "HOLD — back to breakeven, stop 6.85 untouched",
-      "urgency": "info",
-      "reason": "7.67 (-23 CZK) after the scare — the stop survived, the Cyberhawk Q3 catalyst is intact. Friend's book holds it from 8.00 at 15% conviction. First sell 9.80 unchanged."
-    },
-    {
-      "ticker": "YNDX",
-      "action": "NBIS: keep the 0.1-share runner, stop 205",
-      "urgency": "info",
-      "reason": "The dip-buy round-trip is closed (+~260 CZK realized on the trims at 201/225); the 0.1 leftover (~480 CZK) rides as a house-money runner at 227. Stop 205; if the AI-infra leg extends toward the 300 highs, it pays for the coffee this trade earned."
-    }
-  ],
-  "new_plays": [
     {
       "ticker": "LITE",
-      "yf_ticker": "LITE",
-      "name": "Lumentum Holdings",
-      "type": "long",
-      "action": "BUY NOW",
-      "entry_zone": [695, 715],
-      "tranches": [
-        { "pct": 60, "condition": "at market (~707) — the 700 shelf has held for two weeks" },
-        { "pct": 40, "condition": "on a flush to 670-690 if the shelf breaks and reclaims" }
-      ],
-      "first_sell": { "price": 800, "pct": 30 },
-      "second_sell": { "price": 880 },
-      "hard_stop": 665,
-      "catalyst": "FQ4 earnings ~mid-Aug guiding +105% YoY revenue; $2B Nvidia partnership funding AI-optics capacity; CPO transition leadership",
-      "catalyst_date": "2026-08-12",
-      "hold_period": "long-hold designation — multi-quarter thesis, weekly review",
-      "risk_reward": "from ~707: risk -5.9% to stop, +13% to first sell, +24% to second (~1:2.2 / 1:4); runner kept beyond",
-      "checklist_score": "5/6 (dated catalyst, sentiment perfectly split — dueling bull/bear titles the same week, Buy consensus, timing, R:R pass; valuation 46x fwd is the premium-but-justified judgment call given +105% growth)",
-      "suggested_size_czk": 10000,
-      "thesis": "The first position bought under your long-hold policy: Lumentum is the AI-optics arms dealer — record Q3 (revenue $808M), Q4 guided to DOUBLE year-over-year, and a $2B Nvidia partnership funding manufacturing expansion in North Carolina and Japan. The stock corrected 33% from its May peak purely on valuation unwind (80x -> 46x forward) while estimates went UP. Friend's book holds it from 280 at 15% — his largest conviction. The 700 shelf gives a defined-risk entry into a secular story.",
-      "risks": "46x forward is still expensive — a market-wide multiple compression hits LITE 2x as hard (beta); optics competition (Coherent, InP capacity); if the Aug print guides below +90% YoY the premium deflates fast. The 665 stop = the thesis-break line (700 shelf failure)."
+      "action": "MISSED — do not chase at 786; keep the 715 limit as a deep-pullback catch and wait for a new base",
+      "urgency": "info",
+      "reason": "LITE ran from the 707 entry to ~786 (+11%) without ever touching 715 — the trade got away, and that is tuition-free this time. At 786 the math is dead: risk to the 665 stop is -15%, reward to the 800 first sell is +1.8%. The long-hold thesis (Nvidia $2B, +105% guide) is unchanged, so the name stays top of the queue: next entry is either the 715 limit filling on a real flush, or a NEW multi-day base above 750 that lets us re-map levels with sane risk. No starter buys at 786."
+    },
+    {
+      "ticker": "JPM",
+      "action": "DONE — trimmed 0.6 at 335.50 this morning per plan; 0.6 rides through Tuesday",
+      "urgency": "info",
+      "reason": "Size-down executed before the Jul 14 earnings+CPI double binary. The remaining 0.6 (+26 CZK) has the 345 target and needs its stop re-checked after the trim (319.5). If the print is good, financials lead the next leg; if not, half the risk is already off."
+    },
+    {
+      "ticker": "LMT",
+      "action": "HOLD — 521 is 1.3% above the 514 stop; let the stop decide, earnings Jul 21",
+      "urgency": "info",
+      "reason": "-367 CZK, the book's problem child. The guidance-raise thesis gets its verdict at earnings; the stop is close enough that no action is needed — either it holds and the print re-rates it, or the stop enforces the exit. Re-entry after a stop-out: post-earnings reclaim of 540 only."
     },
     {
       "ticker": "ADSK",
-      "yf_ticker": "ADSK",
-      "name": "Autodesk",
-      "type": "long",
-      "action": "BUY ON PULLBACK",
-      "entry_zone": [198, 208],
-      "tranches": [
-        { "pct": 50, "condition": "at market (~206) — basing 11% above the June low" },
-        { "pct": 50, "condition": "on a retest of 195-200 holding" }
-      ],
-      "first_sell": { "price": 240, "pct": 40 },
-      "second_sell": { "price": 258 },
-      "hard_stop": 183,
-      "catalyst": "Q2 FY27 earnings ~Aug 27; MaintainX ($3.6B, largest-ever deal) integration; AWS collaboration",
-      "catalyst_date": "2026-08-27",
-      "hold_period": "long-hold designation — the AI-fear discount unwinding over quarters",
-      "risk_reward": "from ~206: risk -11% to stop, +16.5% to first sell, +25% to second (~1:1.5 / 1:2.3)",
-      "checklist_score": "4/6 (valuation compressed, sentiment split, analyst upside +41% to UBS's 290; timing is at the window's edge and the stock is below its 200-day — the two honest weaknesses)",
-      "suggested_size_czk": 5500,
-      "thesis": "The 'AI kills design software' trade compressed ADSK 34% YTD to near its 52-week low — while actual results went the other way: Q1 revenue AND billings +18.4%, both beats, plus the MaintainX acquisition and AWS AI collaboration. Same setup that made ADBE a community pick. Friend holds from 190 at 5% — small size, and ours matches: below the 200-day means this is early, so it gets the smallest slot in the book.",
-      "risks": "Catching a downtrend early — the 183 stop (under the June 52w low) is non-negotiable; AI-disruption fear can compress multiples further regardless of results; earnings 7 weeks out means no near catalyst if momentum stalls."
+      "action": "FILLED 1.3 @ 206.84 — stop 183 live, plan active",
+      "urgency": "info",
+      "reason": "+78 CZK already at 209.79. Long-hold designation, sells 240 (40%) / 258, earnings Aug 27. Correctly executed: stop placed at entry."
+    },
+    {
+      "ticker": "NVO",
+      "action": "HOLD — both stop orders (8 + 3.3 sh @ 46.5) correctly cover the full position",
+      "urgency": "info",
+      "reason": "48.88 (-214 CZK), catalyst Aug 6. The two-order stop structure is the right way to handle T212's share reservation — same pattern QCOM/CRWV/AAPL need."
+    },
+    {
+      "ticker": "ONDS",
+      "action": "HOLD — green at last (+68 CZK), stop 6.85",
+      "urgency": "info",
+      "reason": "7.75, defense complex steady. Sell1 9.80, Cyberhawk Q3."
+    },
+    {
+      "ticker": "YNDX",
+      "action": "Runner riding at 216.93 (+67 CZK); consider stop 205 instead of 185",
+      "urgency": "info",
+      "reason": "The 0.1 NBIS runner has a 185 stop placed — moving it to 205 locks the round-trip's gain while still giving the AI-infra leg room. Minor sizing, minor point."
     }
   ],
+  "new_plays": [],
   "watchlist": [
+    {
+      "ticker": "SKHY",
+      "yf_ticker": "SKHY",
+      "note": "The REAL SK Hynix trade is not day 1: 60% HBM share, the purest AI-memory asset outside MU (+260% YTD comp). Day-1 premium over Seoul parity (~145) must collapse or be earned first",
+      "trigger": "A 2-4 week post-listing base above ~parity+10% (roughly 160+) -> long-hold candidate with re-mapped levels; alternatively premium compression to <10% over parity makes the ADR investable on fundamentals"
+    },
     {
       "ticker": "CPI-GATE",
       "yf_ticker": "SPY",
-      "note": "~10k CZK stays gated until June CPI (Tue Jul 14, 14:30 Prague). After LITE+ADSK deploy, the book runs ~81% invested + 3.5k reserved",
-      "trigger": "Cool CPI + SPY > 742 -> deploy the rest into the strongest open trigger. Hot CPI -> stops live, reassess Wednesday"
+      "note": "June CPI Tuesday Jul 14, 14:30 Prague, same morning as JPM/C/GS earnings. The book is ~65% invested + 20k in working buy orders",
+      "trigger": "Cool print + SPY > 742 -> the LITE/SKHY queue deploys; hot print -> stops (once re-placed!) do the work"
     },
     {
       "ticker": "RIVN",
       "yf_ticker": "RIVN",
-      "note": "Stopped at 16.40; re-entry trigger unchanged",
-      "trigger": "Daily close > 17.80 before Jul 25, else re-run the framework on the Jul 30 earnings reaction"
+      "note": "Re-entry window open until Jul 25",
+      "trigger": "Daily close > 17.80, else wait for the Jul 30 print"
     },
     {
       "ticker": "HLIT",
       "yf_ticker": "HLIT",
-      "note": "Stopped at 12.83; drift window closing",
-      "trigger": "Reclaim 14.00 on volume before Jul 24 revives the earnings-drift play; otherwise skip the Jul 27 binary"
-    },
-    {
-      "ticker": "INTC",
-      "yf_ticker": "INTC",
-      "note": "~110 — dormant; earnings Jul 23",
-      "trigger": "Only a daily close above 124; nothing before"
+      "note": "Drift window nearly closed",
+      "trigger": "Reclaim 14.00 before Jul 24 or skip the Jul 27 binary"
     },
     {
       "ticker": "MLYS",
       "yf_ticker": "MLYS",
-      "note": "Friend Dizu's pick; lorundrostat PDUFA Dec 22",
-      "trigger": "Pre-PDUFA drift entry window opens ~early November"
-    },
-    {
-      "ticker": "LITE-friend",
-      "yf_ticker": "LITE",
-      "note": "Friend's largest conviction (15% from 280, now ~2.5x). His other holds: ONDS from 8 (15%, we own it), ADSK from 190 (5%, now our play too). Options <0.5% — negligible",
-      "trigger": "Tracked via our LITE and ADSK plays above"
+      "note": "Pre-PDUFA drift play (Dec 22 date)",
+      "trigger": "Entry window opens ~early November"
     }
   ]
 }
