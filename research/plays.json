@@ -1,106 +1,124 @@
 {
-  "as_of": "2026-07-13",
-  "generated_by": "claude daily-research 2026-07-13 (pre-CPI run)",
-  "market_context": "Decision eve: June CPI prints tomorrow 14:30 Prague, the same morning JPM/C/GS open earnings season — the single most consequential macro morning of the month, with the 10Y near 4.6% and May CPI having run hot at 4.2%. Tape into it: calm (VIX ~16, SPY ~751 above the 742 line). SKHY post-listing: opened 170, closed day 1 at 168 (+13% over the 149 issue), then compressed toward Seoul parity (~145) — your restructured 152.50 fill caught the flush with only ~5% premium left in it. LMT stopped out Friday at 513 (-~500 CZK; the guidance-raise thesis now gets tested without us — re-entry only on a post-earnings reclaim of 540). Book: 9 positions, 63% invested, ~29k free cash held at the CPI gate — deployment triggers below fire AFTER tomorrow's print, not before.",
+  "as_of": "2026-07-14",
+  "generated_by": "claude daily-research 2026-07-14 (CPI-day run, written ~14:40 Prague, minutes after the print)",
+  "market_context": "THE gate day: June CPI printed at 14:30 (consensus looked for headline ~3.9% from 4.2%, core ~2.9% on a big gasoline drop) and five major banks reported the same morning — JPM delivered one of its largest beats ever (EPS 6.14 vs 5.85, revenue 58.0B vs 50.2B). First reaction: orderly — SPY ~749 (+0.1%), VIX 17.5, JPM recovered a -3% pre-market dip to flat; but the 10Y ticked to 4.61% and the day needs to close before the verdict is real. Deployment is therefore CLOSE-CONDITIONED: every trigger below reads off tonight's close, and tomorrow's run executes. Book: SKHY scalped +3.6% in 6 hours (the restructured listing trade ended green), AAPL TP1 hit at 318.07, 52% invested with 38.6k free awaiting the conditions. Also today: SpaceX's $86B IPO and Fed Chair Warsh's first Congressional testimony — a heavy tape day.",
   "position_actions": [
     {
-      "ticker": "SKHY",
-      "action": "PLACE STOP 147 NOW — the position is stopless; then run the plan: trims 167.5 / 183 / 198, decision point Wednesday",
+      "ticker": "JPM",
+      "action": "DECISION AT THE CLOSE: monster beat + red close = exit the 0.6; green close above 340 = hold for 345+",
       "urgency": "now",
-      "reason": "Filled 2 ADRs at 152.50 (~6.5k CZK, +87 already) — the restructured entry worked: you bought a ~5% premium to Seoul parity instead of the +42% the open-chasers paid (day 1: open 170, close 168, then the fade you caught). Now the discipline: (1) stop 147 immediately — below the 149 issue price the bookbuild allocants are underwater and selling cascades; (2) first trim at 167.5 — note it coincides with the day-1 close, natural resistance; (3) your 2-day timer lands Wednesday. One honest fork: the original timer assumed a pump-fade ride; your actual entry is a premium-compression value fill, so if SKHY holds above 152.5 through the CPI print, converting the remainder to a small long-hold (60% HBM share, the purest AI-memory ADR) with the same 147 stop is legitimate — but decide it consciously Wednesday, don't drift into it."
+      "reason": "The largest beat in recent JPM history should move the stock UP — if it closes red or flat on that news, the financials-rotation leg is exhausted (everyone who wanted in is in) and the framework's 'catalyst confirmed and priced in' rule says take the rest off. Green close above 340 keeps the 345 TP working with the buyback tailwind. This is a tonight decision, not a next-week one."
     },
     {
-      "ticker": "JPM",
-      "action": "HOLD 0.6 through tomorrow's print with the 345 TP limit working — the size-down WAS the protection",
+      "ticker": "SKHY",
+      "action": "CLOSED at 158.00 (+3.6%, +233 CZK in 6 hours) — re-entry mapped both ways",
       "urgency": "info",
-      "reason": "337.54 (+50 CZK). Earnings + CPI tomorrow morning. The half you sold at 335.50 Friday already took the binary risk off; a stop wouldn't protect the rest anyway (earnings gaps jump stops). Keeping the 345 limit means a strong print pays you into strength automatically. If the print disappoints, the framework rule applies: guidance disappointment = sell, at market, same day."
+      "reason": "The listing trade ends green because the restructure bought at 152.5 instead of the 205 open — the full sequence (parity math -> patient limit -> quick scalp) is the playbook for the SpaceX IPO too. Re-entry: above a 160 daily close as a conscious long-hold conversion (60% HBM share), or below 148 as a near-parity value catch. Neither is urgent."
     },
     {
       "ticker": "ONDS",
-      "action": "HOLD — 7.22, five percent above the 6.85 stop; the stop decides, not us",
+      "action": "HOLD — 7.12, four percent above the 6.85 stop; no interference",
       "urgency": "level",
-      "reason": "-520 CZK, the book's red lantern since LMT left. The Cyberhawk Q3 close and defense-budget flow remain real catalysts, the chart remains broken. No averaging, no stop-moving: either it holds the shelf or the 6.85 stop enforces the exit (re-entry: reclaim 7.70 with two green closes, unchanged)."
-    },
-    {
-      "ticker": "QCOM",
-      "action": "HOLD — stop 179 correctly re-placed on the full position; sell 205 is now a manual level",
-      "urgency": "info",
-      "reason": "185.40 (+432 CZK). You chose full-size stop protection over the resting 205 TP limit (T212 makes you pick) — right choice into a CPI week. Sell ~40% manually if 205 prints; runner logic for 250 unchanged. Earnings Jul 29."
-    },
-    {
-      "ticker": "CRWV",
-      "action": "HOLD — stop 75 live on full size; 100 is the manual TP level",
-      "urgency": "info",
-      "reason": "87.45 (+255 CZK). Same structure choice as QCOM, same verdict. The Meta-overhang headlines have gone quiet and the AI-infra complex is basing; 100/118 targets stand."
+      "reason": "-633 CZK, the book's problem position. Catalysts (Cyberhawk Q3, defense flow) unchanged, chart unchanged, rule unchanged: the stop decides. Re-entry after a stop-out stays 7.70 + two green closes."
     },
     {
       "ticker": "AAPL",
-      "action": "HOLD — the split is textbook: 318 limit on 0.42, stop 294 on 0.63",
+      "action": "TP1 DONE at 318.07; remaining 0.63 has the 330 limit but NO stop — swap after today's close",
+      "urgency": "level",
+      "reason": "+141 CZK on the remainder. The 330 limit reserves all shares, leaving zero downside protection with earnings Jul 30 approaching. Recommendation: once today's CPI digestion is done, cancel the 330 limit and place a 302 stop (locks profit), treating 330 as a manual alert level — or accept consciously that this 4.7k slice trades stopless. The framework prefers the stop."
+    },
+    {
+      "ticker": "QCOM",
+      "action": "HOLD — 189.99 (+600 CZK), stop 179; next manual TP 205 with the 250-runner plan",
       "urgency": "info",
-      "reason": "316.40 (+248 CZK), the 318 TP is one good day away. After it prints, raise the remainder stop to 302. Earnings Jul 30."
+      "reason": "Back at the 190 level it first paid you at. Earnings Jul 29 — the size-down decision comes Friday Jul 24. Strongest position in the book."
+    },
+    {
+      "ticker": "CRWV",
+      "action": "HOLD — 85.85 (+176 CZK), stop 75, manual TP 100",
+      "urgency": "info",
+      "reason": "Basing above 85 again. If the CPI verdict is risk-on, this is the highest-beta rocket in the book; the stop protects the other outcome."
     },
     {
       "ticker": "ADSK",
-      "action": "HOLD — long-hold designation active, +85 CZK, nothing to do",
+      "action": "HOLD — 202.90 (-116 CZK), long-hold cadence, stop 183",
       "urgency": "info",
-      "reason": "210.14 vs 206.84 entry, stop 183 live, sells 240/258, earnings Aug 27. Weekly-review cadence per the long-hold policy — next look Friday."
+      "reason": "First red week for the newest position; nothing thesis-relevant happened (no news). Weekly review Friday; the 183 stop is the only daily-frequency rule."
     },
     {
       "ticker": "NVO",
-      "action": "HOLD — full 11.3 covered by both stops at 46.5",
+      "action": "HOLD — 49.15 (-158 CZK), stops 46.5, catalyst Aug 6",
       "urgency": "info",
-      "reason": "49.48 (-76 CZK), coiling under 50 with the Aug 6 print as the timer. Long-hold candidacy assessed after that print."
+      "reason": "Coiling under 50 for a second week. Patience is the position."
     },
     {
       "ticker": "YNDX",
-      "action": "Runner rides — 213.2 (+59 CZK), stop 185",
+      "action": "Runner at 219.70 (+72 CZK), stop 185 — consider trailing to 200 after a 230 break",
       "urgency": "info",
-      "reason": "House money from the +22% round-trip. If the AI-infra leg reignites post-CPI, it participates; if not, the stop returns the winnings."
-    },
-    {
-      "ticker": "LMT",
-      "action": "STOPPED at 513 Friday (-~500 CZK) — re-entry trigger set, watching the Jul 21 print from the sidelines",
-      "urgency": "info",
-      "reason": "The raised-guidance thesis didn't hold the technical level and the stop enforced the rules. If earnings vindicate the story: re-entry on a post-print reclaim of 540, sized fresh. No regret trades before that."
+      "reason": "House money continues to work. Above 230 (the old momentum line) trail the stop to 200."
     }
   ],
-  "new_plays": [],
-  "watchlist": [
-    {
-      "ticker": "CPI-DEPLOYMENT-QUEUE",
-      "yf_ticker": "SPY",
-      "note": "~29k free fires AFTER tomorrow's 14:30 print, in this order: (1) LITE ~8-10k on a pullback into 745-765 holding (stop 714, below the old shelf) or a fresh base; (2) financials leg ~5k (JPM re-add or XLF) if the JPM print + guidance land well; (3) SKHY add ~4k only above 160 post-CPI as part of a conscious long-hold re-designation. Hot CPI = queue frozen, stops work, reassess Wednesday",
-      "trigger": "June CPI, Tue Jul 14, 14:30 Prague — cool + SPY holds 742 = deploy; hot = freeze"
-    },
+  "new_plays": [
     {
       "ticker": "LITE",
       "yf_ticker": "LITE",
-      "note": "~785 after the missed 715 entry — the long-hold thesis (Nvidia $2B, +105% guide) is untouched, only the price ran",
-      "trigger": "Pullback into 745-765 that holds, or a multi-day base -> re-mapped entry with stop 714"
+      "name": "Lumentum Holdings",
+      "type": "long",
+      "action": "BUY ON PULLBACK",
+      "entry_zone": [745, 765],
+      "tranches": [
+        { "pct": 60, "condition": "limit at 760-762 — price is at 768 and drifting into the zone NOW" },
+        { "pct": 40, "condition": "deeper flush to 745-750 holding" }
+      ],
+      "first_sell": { "price": 840, "pct": 30 },
+      "second_sell": { "price": 900 },
+      "hard_stop": 714,
+      "catalyst": "FQ4 earnings ~mid-Aug guiding +105% YoY; $2B Nvidia partnership; CPO leadership",
+      "catalyst_date": "2026-08-12",
+      "hold_period": "long-hold designation — multi-quarter thesis, weekly review",
+      "risk_reward": "from ~760: risk -6.1% to stop, +10.5% to first sell, +18.4% to second (~1:1.7 / 1:3.0); runner beyond",
+      "checklist_score": "5/6 (unchanged from the Jul 9 scoring; only the levels moved up with the breakout-and-pullback structure)",
+      "suggested_size_czk": 9000,
+      "thesis": "Second attempt at the missed Jul 9 entry: LITE ran 707->785 without us, and is now pulling back into the breakout zone (768 and drifting). The re-mapped entry buys the RETEST instead of chasing the high — stop 714 sits below the old 715 shelf-turned-support. Thesis unchanged: the AI-optics arms dealer, FQ4 guided to double YoY, Nvidia money funding the capacity.",
+      "risks": "If CPI digestion turns risk-off, a 46x-forward name falls fastest — that is what the 714 stop is for; if the pullback never reaches 762, we miss again and accept it: missing is recoverable, chasing is not."
+    }
+  ],
+  "watchlist": [
+    {
+      "ticker": "CLOSE-CONDITIONS",
+      "yf_ticker": "SPY",
+      "note": "Tonight's close settles the CPI verdict. Deployment map for tomorrow's run: SPY closes > 745 AND VIX < 19 = risk-on confirmed -> LITE tranche active, JPM add-back candidate, CRWV/QCOM ride. SPY < 742 or VIX > 22 = the print failed -> stops work, queue frozen",
+      "trigger": "Read at US close (22:00 Prague); tomorrow's run executes the branch"
+    },
+    {
+      "ticker": "SPCX",
+      "yf_ticker": "SPCX",
+      "note": "SpaceX's $86B IPO debuts today (~139 indicated) — a TRUE price-discovery IPO, unlike SKHY, so the day-1 pop dynamics genuinely apply. But so does the framework: no day-1 chases; the SKHY sequence (wait for the flush/base, buy the planned level) is the template",
+      "trigger": "A 1-2 week base or a first-pullback structure -> full framework run; nothing on day 1"
     },
     {
       "ticker": "RIVN",
       "yf_ticker": "RIVN",
       "note": "Re-entry window expires Jul 25",
-      "trigger": "Daily close > 17.80, else re-run on the Jul 30 print"
+      "trigger": "Daily close > 17.80"
     },
     {
       "ticker": "HLIT",
       "yf_ticker": "HLIT",
       "note": "Drift window expires Jul 24",
-      "trigger": "Reclaim 14.00 on volume or skip the Jul 27 binary"
+      "trigger": "Reclaim 14.00 on volume or skip the Jul 27 print"
     },
     {
       "ticker": "INTC",
       "yf_ticker": "INTC",
-      "note": "Dormant; earnings Jul 23",
+      "note": "Earnings Jul 23 — nine days; dormant below trigger",
       "trigger": "Daily close > 124 only"
     },
     {
       "ticker": "MLYS",
       "yf_ticker": "MLYS",
-      "note": "Pre-PDUFA drift (Dec 22 date)",
-      "trigger": "Entry window ~early November"
+      "note": "Pre-PDUFA drift (Dec 22)",
+      "trigger": "~early November"
     }
   ]
 }
