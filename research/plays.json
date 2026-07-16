@@ -1,130 +1,222 @@
 {
-  "as_of": "2026-07-15",
-  "generated_by": "claude daily-research 2026-07-15 (risk-on branch executed; Johnnylixf portfolio integrated)",
-  "market_context": "CPI verdict: decisively cool — headline fell 0.4% m/m to 3.5% YoY (vs 3.8% expected, from 4.2%), core FLAT at 2.6% (vs 2.9%), July hike odds collapsed 42% -> 17%, Nasdaq +0.9% with chips bouncing. The risk-on branch from yesterday's close-conditions EXECUTES today. Book events: QCOM's raised stop fired at 178.7 during the post-print whipsaw — the full QCOM trade still closed +~740 CZK (this is the stop doing its job, not a failure); JPM closed green on its record beat and sits $1 from the 345 TP; LITE escaped a third time (765 limit stranded, price 814). Friend Johnnylixf's book integrated: ~70% concentrated in derated AI-infra/SaaS with a heavy options overlay — his cash-stock convictions overlapping ours: QCOM, CRWV, NBIS, HLIT, OUST. His new call: FPS (power infrastructure) — researched below and it passes.",
+  "as_of": "2026-07-16",
+  "generated_by": "claude daily-research 2026-07-16 (full target allocation, 100% deployed per user)",
+  "market_context": "TARGET ALLOCATION DAY. Performance review on record: since Jul 2 the account is ~-2.2% vs SPY +2.8% — the losses came from high-beta whipsaws (RIVN -1,109, HLIT -870, ONDS -830, CRWV -330, LMT -500, MRVL -190) while the 'boring' names carried profits (QCOM +740, AAPL +510, NBIS +260, SKHY +233, JPM +190, NVO +254). The 3-week sector tape: software IGV +10.8% LEADS, financials +5.8%, energy +4.5%, biotech +3.1% — AI-infra WORST (NBIS -22%, CRWV -22%, SMH -7%), and today MRVL -7.3%, OUST -9.6% again. Friend's 17-name watchlist (johnnys_baskets) processed: MITK/RDDT/FPS/NBIS pass filters; CCXI is a SPAC shell (auto-pass), MRLN a falling micro-cap (pass), MRVL/OUST/BB/FIVN/LUMN/CLFD/HLIT rejected on red flags or broken structure; NOW needs its 120 reclaim. New target allocation (of ~86.2k): NVO 18, IGV 14, FPS 11, LITE 10, MITK 10, SKHY 9, XLF 8, ADSK 7, RDDT 7, AAPL 6 (until the 330 TP pays, then +3 IGV +3 XLF). Every line has a hard stop; no options, no SPACs, no micro-caps.",
   "position_actions": [
     {
-      "ticker": "JPM",
-      "action": "Let the 345 TP fill — then the financials earnings trade is COMPLETE; no re-add",
-      "urgency": "info",
-      "reason": "343.99 (+136 CZK) after closing green on one of its largest beats ever. When 345 prints, the whole JPM play closes at roughly +3% on the position with the catalyst realized — 'catalyst confirmed and priced in' means done, not doubled. Financials stay on the watchlist only via XLF."
-    },
-    {
-      "ticker": "QCOM",
-      "action": "STOPPED at 178.70 (whipsaw) — trade closed +~740 CZK overall; re-entry: daily close > 185 or the Jul 29 print",
-      "urgency": "info",
-      "reason": "The post-CPI whipsaw ran QCOM from 190 to under 179 in two hours before the market closed green — the 179 stop (raised from 171 precisely to lock gains) executed as designed. Sold 1.2 @ 190 + 1.74 @ 178.7 vs 174.27 entry = profitable trade start to finish. Whipsaw stop-outs sting; broke-through-support stop-outs save accounts — you cannot have one without risking the other. Re-entry trigger set; friend still holds QCOM stock + 240C calls."
-    },
-    {
-      "ticker": "AAPL",
-      "action": "REPEAT FLAG: the 0.63 shares are STOPLESS behind the 330 limit — swap to a 302 stop",
+      "ticker": "ALLOCATION",
+      "action": "Target portfolio (% of account): NVO 18 · IGV 14 · FPS 11 · LITE 10 · MITK 10 · SKHY 9 · XLF 8 · ADSK 7 · RDDT 7 · AAPL 6-to-exit",
       "urgency": "now",
-      "reason": "317.66 (+169 CZK). Second day carrying earnings-bound shares with no downside protection. Cancel the 330 limit, place the 302 stop (locks profit), treat 330 as a manual alert. Earnings Jul 30 — size-down decision lands Jul 28."
-    },
-    {
-      "ticker": "CRWV",
-      "action": "HOLD — 80.25 (-92 CZK), stop 75 stands; the 85 level is now the third test",
-      "urgency": "info",
-      "reason": "Faded from 85.8 with the whipsaw. Two rejections at 85 make the next approach decisive. Friend holds CRWV stock + 120C calls — same direction, more leverage. The stop at 75 keeps the risk honest; TP 100 unchanged."
-    },
-    {
-      "ticker": "ONDS",
-      "action": "HOLD — 7.36 (-359 CZK), stop 6.85; still the stop's decision",
-      "urgency": "info",
-      "reason": "Recovering off the lows for the second time this week. Cyberhawk Q3 close approaching; the shelf either holds or it doesn't."
+      "reason": "100% deployment per your instruction, built from the framework + the objective sector tape, not from FOMO: 31% software (the leading sector: IGV basket + MITK + ADSK), 18% healthcare breakout (NVO into Aug 6), 30% researched AI-hardware value (FPS power infra, LITE optics, SKHY near-parity memory — the boom exposure you asked for, bought at defined-risk levels instead of -22%-trend knives), 8% financials (record earnings season), 7% RDDT growth. Sells to fund it: JPM 0.2 dust, YNDX 0.1 dust, AAPL at its 330 TP. Every position carries a stop; totals ~98% invested with ~2% for fees/rounding."
     },
     {
       "ticker": "NVO",
-      "action": "HOLD — 48.96 (-191 CZK), third week coiling under 50; catalyst Aug 6",
-      "urgency": "info",
-      "reason": "Cool CPI helps rate-sensitive pharma; the Medicare-coverage thesis needs the earnings print to ignite. Stops 46.5 cover the full 11.3."
+      "action": "ADD to 18% (~15.5k total): buy ~3.4k at 50.5-51.5; stop on full position rises to 48",
+      "urgency": "now",
+      "reason": "The breakout out of the three-week coil is live (+254 CZK, 51.1) with the Aug 6 print as catalyst — the strongest setup already in the book. Largest allocation, still under half the 40% cap."
     },
     {
-      "ticker": "ADSK",
-      "action": "HOLD — 205.98, breakeven; Friday is the weekly long-hold review",
-      "urgency": "info",
-      "reason": "Friend's book is 21.8% derated SaaS (MITK, NOW, FIVN, BB) — the same thesis expressed wider. Ours stays single-name with the 183 stop."
+      "ticker": "JPM",
+      "action": "SELL the 0.2 dust — trade complete (+~190 CZK realized overall)",
+      "urgency": "now",
+      "reason": "Catalyst realized at the 345 TP. Proceeds fold into the allocation."
     },
     {
       "ticker": "YNDX",
-      "action": "Runner faded to 196.23 (+23 CZK) — stop 185 decides; no intervention on dust",
-      "urgency": "info",
-      "reason": "The 0.1-share runner either resumes with the AI-infra bid or returns ~500 CZK at the stop. House money, house rules."
+      "action": "SELL the 0.1 runner (~400 CZK) — consolidating dust into the allocation",
+      "urgency": "now",
+      "reason": "The NBIS trade already banked +260; the runner's job is done. NBIS exposure returns via the SKHY/LITE sleeve if the AI tape turns."
+    },
+    {
+      "ticker": "AAPL",
+      "action": "KEEP until the 330 limit pays (0.7% away, +280 CZK), then redeploy: +3% IGV, +3% XLF",
+      "urgency": "level",
+      "reason": "Selling a +7% winner one day before its target is throwing away the plan's payoff. The 330 fill both honors your no-more-AAPL preference and funds the momentum sleeve."
     },
     {
       "ticker": "LITE",
-      "action": "THIRD ESCAPE (814 vs the 765 limit) — keep the limit; if LITE closes >820 three straight days, cancel and wait for the Aug 12 print",
-      "urgency": "level",
-      "reason": "707 -> 785 -> 768 -> 814: every pullback has been shallower than our zone. The discipline holds — chasing a 46x-forward name 15% above the planned entry is how winners become losers — but honesty requires the exit condition: three closes above 820 means the retest is not coming and the earnings print becomes the next legitimate entry point. Friend's circle expresses this theme via LUMN calls instead; not comparable risk."
+      "action": "HOLD at 10% — 742 vs 765 entry, stop 714 is the line",
+      "urgency": "info",
+      "reason": "Long-hold entered on the planned pullback; drawdown inside normal range. Aug 12 print is the catalyst."
+    },
+    {
+      "ticker": "FPS",
+      "action": "HOLD at 11% — +3.5% today, the only green momentum name on the friend's whole list",
+      "urgency": "info",
+      "reason": "Power infrastructure keeps outperforming the complex; stop 36.8, first sell 50."
+    },
+    {
+      "ticker": "ADSK",
+      "action": "HOLD at 7% — leading-sector position, stop 183",
+      "urgency": "info",
+      "reason": "Software +10.8% in 3 weeks; ADSK +84 CZK. Sells 240/258."
+    },
+    {
+      "ticker": "HLIT",
+      "action": "TRIGGER DEAD — 12.99, -5% today, below the 14.00 reclaim; skip the Jul 27 earnings entirely",
+      "urgency": "info",
+      "reason": "The drift window closed itself. Friend holds 5.1% into the print; we watch from outside. No position, no re-entry until a post-earnings structure."
+    },
+    {
+      "ticker": "MRVL",
+      "action": "REJECTED from the pool — -7.3% today; the Jul 2 exit thesis keeps getting confirmed",
+      "urgency": "info",
+      "reason": "CFO selling + premium multiple + broken momentum was the exit call at 241; it trades 206 today. Friend holds 10.4% + calls. Not our trade at any recent price."
     }
   ],
   "new_plays": [
     {
-      "ticker": "FPS",
-      "yf_ticker": "FPS",
-      "name": "Forgent Power Solutions",
-      "type": "long",
+      "ticker": "MITK",
+      "yf_ticker": "MITK",
+      "name": "Mitek Systems",
+      "type": "swing",
       "action": "BUY NOW",
-      "entry_zone": [39.5, 42.5],
+      "entry_zone": [18.8, 19.6],
       "tranches": [
-        { "pct": 60, "condition": "at market (~41.2) — the stock round-tripped the entire June rally back to the May base" },
-        { "pct": 40, "condition": "on a dip to 38-39.5 holding" }
+        { "pct": 60, "condition": "at market (~19.33)" },
+        { "pct": 40, "condition": "on a 52wH breakout close above 21.10" }
       ],
-      "first_sell": { "price": 50, "pct": 30 },
-      "second_sell": { "price": 59 },
-      "hard_stop": 36.8,
-      "catalyst": "Record bookings +308% YoY ($867M vs $379M revenue = 2.3x book-to-bill); FY26 guide raised to +82% growth; next print ~Sept; datacenter power buildout is the structural driver",
+      "first_sell": { "price": 22.5, "pct": 40 },
+      "second_sell": { "price": 24.5 },
+      "hard_stop": 17.4,
+      "catalyst": "FQ3 earnings ~Aug 7; record revenue, Fraud & Identity +28-30% YoY, raised guide, 30-33% EBITDA margins, $50M buyback",
+      "catalyst_date": "2026-08-07",
+      "hold_period": "3-6 weeks",
+      "risk_reward": "from 19.3: -9.8% / +16.6% / +27% (~1:1.7 / 1:2.7)",
+      "checklist_score": "4/6",
+      "suggested_size_czk": 8600,
+      "thesis": "Allocation: 10%. The momentum name in the leading sector: deepfake-fraud detection — generative AI creates its demand. Friend's largest stock (9.3%). Pressing the 52-week high.",
+      "risks": "Aug 7 print is binary for a small cap — size-down rule applies into it; legacy check-deposit drags headline growth."
+    },
+    {
+      "ticker": "IGV",
+      "yf_ticker": "IGV",
+      "name": "iShares Software ETF",
+      "type": "swing",
+      "action": "BUY NOW",
+      "entry_zone": [92.5, 94.5],
+      "tranches": [{ "pct": 100, "condition": "at market — basket entry" }],
+      "first_sell": { "price": 101, "pct": 50 },
+      "second_sell": { "price": 106 },
+      "hard_stop": 88.4,
+      "catalyst": "Leading sector (+10.8% in 3wk); software earnings mid-Aug; SaaS derating unwind",
       "catalyst_date": "",
-      "hold_period": "long-hold designation — multi-quarter thesis, weekly review",
-      "risk_reward": "from ~41.2: risk -10.7% to stop, +21% to first sell, +43% to second (~1:2 / 1:4); runner beyond",
-      "checklist_score": "4/6 (valuation reasonable vs +82% growth, sentiment split — -38% drawdown against accelerating fundamentals, R:R passes, long-hold timing per policy; no dated near-term catalyst and thin analyst coverage are the honest gaps)",
-      "suggested_size_czk": 9000,
-      "thesis": "Friend Johnnylixf's 'start your positions here' call survives the framework: Forgent makes the electrical distribution equipment every AI datacenter needs — revenue +103% YoY, bookings +308% to a record $867M (2.3x book-to-bill = revenue visibility for years), guidance raised to +82% growth — while the stock gave back the ENTIRE June rally (66 -> 41) in the AI-infra derating. Buying at the May base with a 2.3x book-to-bill is buying the backlog at a discount. Note his instrument (Nov 50C) expresses the same level we use as first sell.",
-      "risks": "No dated catalyst until ~Sept earnings — this can idle (long-hold cadence accepts that); recent-IPO dynamics (thin coverage, possible lockup flows explain part of the -38%); if datacenter capex headlines crack (the Meta-style scare), power infra de-rates with the complex. Stop 36.8 = below the May shelf, the thesis-break line."
+      "hold_period": "3-8 weeks, trend-following",
+      "risk_reward": "from 93.9: -5.9% / +7.6% / +12.9%",
+      "checklist_score": "4/6 (basket rules)",
+      "suggested_size_czk": 12000,
+      "thesis": "Allocation: 14% (rises to 17% after the AAPL TP). The cleanest 'buy what is rising': the strongest 3-week sector tape on the board, with single-name alpha coming from MITK/ADSK on top.",
+      "risks": "Sector beta both ways; the 88.4 stop caps it."
+    },
+    {
+      "ticker": "SKHY",
+      "yf_ticker": "SKHY",
+      "name": "SK Hynix ADR",
+      "type": "long",
+      "action": "BUY ON PULLBACK",
+      "entry_zone": [150, 156],
+      "tranches": [
+        { "pct": 60, "condition": "at 152-155 (the zone that already paid +3.6% once)" },
+        { "pct": 40, "condition": "on a flush to 148-150 near parity" }
+      ],
+      "first_sell": { "price": 168, "pct": 30 },
+      "second_sell": { "price": 185 },
+      "hard_stop": 146,
+      "catalyst": "60% HBM share; AI-memory supercycle (MU comp); premium to Seoul parity (~145) nearly exhausted at the entry zone",
+      "catalyst_date": "",
+      "hold_period": "long-hold designation",
+      "risk_reward": "from ~153: -4.6% / +9.8% / +21% (~1:2.1 / 1:4.5)",
+      "checklist_score": "4/6",
+      "suggested_size_czk": 7800,
+      "thesis": "Allocation: 9%. The researched way to own the memory boom: buying within ~6% of hard parity value (vs MU +260% YTD as the sector comp), where the July 13 scalp already proved the level. This is the 'AI upside' sleeve with a floor under it.",
+      "risks": "Korea-tape gaps flow through overnight; parity itself falls if Seoul corrects. Stop 146 sits just under parity."
+    },
+    {
+      "ticker": "XLF",
+      "yf_ticker": "XLF",
+      "name": "Financial Select SPDR",
+      "type": "swing",
+      "action": "BUY NOW",
+      "entry_zone": [55.8, 57],
+      "tranches": [{ "pct": 100, "condition": "at market — basket entry" }],
+      "first_sell": { "price": 60, "pct": 50 },
+      "second_sell": { "price": 62.5 },
+      "hard_stop": 53.9,
+      "catalyst": "Record bank earnings season underway (JPM's biggest beat ever); +5.8% 3wk tape; rate-cut odds rising post-CPI",
+      "catalyst_date": "",
+      "hold_period": "3-8 weeks",
+      "risk_reward": "from 56.5: -4.6% / +6.2% / +10.6%",
+      "checklist_score": "4/6 (basket rules)",
+      "suggested_size_czk": 6900,
+      "thesis": "Allocation: 8% (rises to 11% after the AAPL TP). The sector that just delivered record earnings, held as a basket after the single-name JPM trade completed at +3%.",
+      "risks": "A hot PPI or yield spike reverses the rotation; stop 53.9 under the breakout shelf."
+    },
+    {
+      "ticker": "RDDT",
+      "yf_ticker": "RDDT",
+      "name": "Reddit",
+      "type": "swing",
+      "action": "BUY ON PULLBACK",
+      "entry_zone": [186, 198],
+      "tranches": [
+        { "pct": 50, "condition": "at 192-198 (current ~198)" },
+        { "pct": 50, "condition": "on a dip to 186-190" }
+      ],
+      "first_sell": { "price": 225, "pct": 40 },
+      "second_sell": { "price": 245 },
+      "hard_stop": 172,
+      "catalyst": "Q2 earnings ~Jul 31 — ad platform + AI data-licensing growth; friend's designated 'long-term' pick",
+      "catalyst_date": "2026-07-31",
+      "hold_period": "2-6 weeks",
+      "risk_reward": "from ~195: -11.8% / +15.4% / +25.6% (~1:1.3 / 1:2.2)",
+      "checklist_score": "4/6 provisional — the earnings print is 15 days out and this entry carries it; apply the size-down rule (this 7% slot IS the sized-down version)",
+      "suggested_size_czk": 6000,
+      "thesis": "Allocation: 7%. The one 'long-term' name on the friend's sheet that is a real business at scale ($38B): dual engine of ad growth and AI data-licensing deals. Smallest equity slot because the Jul 31 print arrives inside the hold window.",
+      "risks": "High-multiple social names gap violently on user-growth misses; 172 stop = below the June consolidation."
     }
   ],
   "watchlist": [
     {
-      "ticker": "MITK",
-      "yf_ticker": "MITK",
-      "note": "Friend's largest single stock (9.3%) — Mitek, ID-verification/fraud AI at 19.46, pressing the 52wH (21). Momentum candidate, needs its own framework run before any entry",
-      "trigger": "Breakout close > 21 on volume, or a pullback to 17.5-18; deep-dive on trigger"
-    },
-    {
-      "ticker": "HLIT",
-      "yf_ticker": "HLIT",
-      "note": "13.67 — nine days to the Jul 24 deadline, 2.4% below the trigger; friend holds 5.1%",
-      "trigger": "Reclaim 14.00 on volume revives the drift play into Jul 27 earnings; otherwise skip"
-    },
-    {
       "ticker": "QCOM",
       "yf_ticker": "QCOM",
-      "note": "Stopped profitably; earnings Jul 29",
-      "trigger": "Daily close > 185, or re-run the framework on the print"
+      "note": "177.98 — re-entry armed; earnings Jul 29",
+      "trigger": "Daily close > 185 or the print reaction"
     },
     {
-      "ticker": "SPCX",
-      "yf_ticker": "SPCX",
-      "note": "SpaceX IPO — true price discovery; SKHY playbook applies (no day-1, wait for structure)",
-      "trigger": "First-pullback structure or 1-2 week base -> framework run"
+      "ticker": "NOW",
+      "yf_ticker": "NOW",
+      "note": "ServiceNow ~105, halved in the SaaS derating; deep value end of the winning sector",
+      "trigger": "Reclaim of 120 -> deep-dive"
+    },
+    {
+      "ticker": "CRWV",
+      "yf_ticker": "CRWV",
+      "note": "77.12 — stopped at 74.96; AI-infra still falling (-22% 3wk)",
+      "trigger": "Daily close > 80 with SMH 5-day positive"
+    },
+    {
+      "ticker": "NBIS",
+      "yf_ticker": "NBIS",
+      "note": "199.51, +2.8% today — the first green shoot in AI-infra",
+      "trigger": "Reclaim 230 on volume"
     },
     {
       "ticker": "RIVN",
       "yf_ticker": "RIVN",
-      "note": "Re-entry window expires Jul 25",
+      "note": "Window expires Jul 25",
       "trigger": "Daily close > 17.80"
     },
     {
       "ticker": "INTC",
       "yf_ticker": "INTC",
-      "note": "Earnings Jul 23 — 8 days; still dormant",
-      "trigger": "Daily close > 124 only; no pre-earnings entry below it"
+      "note": "Earnings Jul 23",
+      "trigger": "Daily close > 124 only"
     },
     {
-      "ticker": "NOW",
-      "yf_ticker": "NOW",
-      "note": "Friend holds NOW + 130C — ServiceNow at ~105, HALVED from 210 in the 'AI disrupts SaaS' derating. The most interesting fallen angel on his sheet, but needs a full framework run (is the moat cracking or just the multiple?)",
-      "trigger": "Deep-dive on request or on a reclaim of 120"
+      "ticker": "MLYS",
+      "yf_ticker": "MLYS",
+      "note": "Pre-PDUFA drift (Dec 22)",
+      "trigger": "~early November"
     }
   ]
 }
